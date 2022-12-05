@@ -7,7 +7,7 @@
 body {
   overflow-x: hidden;
   font-family: Arial, sans-serif;
-  background-color: lightgray;
+  /* background-color: lightgray; */
 }
 
 a {
@@ -1086,7 +1086,7 @@ img {
 
 .cart__box {
   margin: 20px 10px;
-  background-color: lightgray;
+  /* background-color: lightgray; */
   box-shadow: 0 0 3px black;
   padding: 10px;
   font-size: 30px;
