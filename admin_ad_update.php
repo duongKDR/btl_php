@@ -9,7 +9,6 @@ Fixbug,testing:Lê Minh Phương
 include('admin_header.php');
 include('admin_sidebar.php');
 ?>
-
 <form action="admin_ad_update.php" method="post" class="container">
 
     <div class="title">

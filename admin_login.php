@@ -7,6 +7,7 @@ Fixbug,testing:Lê Minh Phương
 
 session_start();
 include('db.php')
+
 ?><div class="admin__login">
     <form method="post">
         <label>
@@ -25,7 +26,7 @@ include('db.php')
 if (isset($_POST['submit'])) {
     $ad_email = $_POST['ad_email'];
     $ad_pass = md5($_POST['ad_pass']);
-    $sql = "SELECT * FROM `ad` WHERE ad_email='$ad_email' AND ad_pass='$ad_pass'";
+    $sql = "SELECT * FROM `admins` WHERE admin_email='$ad_email' AND admin_pass='$ad_pass'";
     $res = mysqli_query($con, $sql);
     $count = mysqli_num_rows($res);
     // echo  $sql;

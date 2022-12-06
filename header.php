@@ -20,7 +20,6 @@ include('functions.php')
     <link rel="stylesheet" href="css/style3.css">
    
     <script src='https://kit.fontawesome.com/a076d05399.js' crossorigin='anonymous'></script>
-  
     <link rel="stylesheet" href="css/style.css" />
     <link rel="shortcut icon" href="image/sky.png" type="image/x-icon" />
     <title>BULE SKY</title>
@@ -33,16 +32,16 @@ include('functions.php')
         <section class="menu top">
             <nav class="menu left mg">
                 <ul>
-                    <li><a href="home.php" >Trang chủ ||</a></li>
+                    <li><a href="index.php" >Trang chủ ||</a></li>
 
                     <div class="dropdown">
                         <li><i class="fa-regular fa-circle-question"></i><a href="contact.php"  >Liên hệ</a></li>
                         <div class="hidden boder">
                             <!-- <?php
-                            if (!isset($_SESSION['user_email'])) {
+                            if (!isset($_SESSION['user_name'])) {
                                 echo "Xin chào";
                             } else {
-                                echo " Xin chào: " . $_SESSION['user_email'] . "";
+                                echo " Xin chào: " . $_SESSION['user_name'] . "";
                             }
                             ?> -->
                         </div>
@@ -78,19 +77,19 @@ include('functions.php')
         </section>
         <section class="menu bottom">
             <nav class="blue_font">
-                <a href="home.php" style="text-decoration: none">
+                <a href="index.html" style="text-decoration: none">
                     BULE SKY </a>
             </nav>
-            <form class="search">
-                <input type="text" placeholder="10.10 SĂN MÃ FREESHIP 0Đ">
-                <button><i class="fa-sharp fa-solid fa-magnifying-glass"></i></button>
+            <form class="search"  method="get" action="search.php">
+                <input type="text" placeholder="10.10 SĂN MÃ FREESHIP 0Đ" name="user_query" required>
+                <button type="submit" name="search" value="Search"><i class="fa-sharp fa-solid fa-magnifying-glass"></i></button>
             </form>
             <?php
-            if (isset($_POST['search__submit'])) {
-                $search = $_POST['search'];
-                $_SESSION['search'] = $search;
-                echo "<script>window.open('search.php','_self')</script>";
-            }
+                if (isset($_GET['search'])) {
+                    $search = $_GET['user_query'];
+                    $_SESSION['user_query'] = $search;
+                    echo "<script>window.open('search.php','_self')</script>";
+                }
             ?>
             <nav class="shopping">
                 <div class="dropdown"><a href="giohang.html">

@@ -36,7 +36,7 @@ if (!isset($_SESSION['ad_email'])) {
             echo $_SESSION['ad_email'];
             if (isset($_SESSION['ad_email'])) {
                 $ad_email=$_SESSION['ad_email'];
-                $sql = "SELECT * from `ad` where ad_email='$ad_email'";
+                $sql = "SELECT * from `admins` where admin_email='$ad_email'";
                 $res = mysqli_query($con, $sql);
                 $row = mysqli_fetch_array($res);
                 $permission= $row['permission'];
