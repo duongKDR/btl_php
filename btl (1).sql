@@ -3,9 +3,9 @@
 -- https://www.phpmyadmin.net/
 --
 -- Máy chủ: 127.0.0.1
--- Thời gian đã tạo: Th12 05, 2022 lúc 09:17 AM
+-- Thời gian đã tạo: Th12 06, 2022 lúc 05:23 PM
 -- Phiên bản máy phục vụ: 10.4.25-MariaDB
--- Phiên bản PHP: 8.1.10
+-- Phiên bản PHP: 7.4.30
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 START TRANSACTION;
@@ -18,7 +18,7 @@ SET time_zone = "+00:00";
 /*!40101 SET NAMES utf8mb4 */;
 
 --
--- Cơ sở dữ liệu: `btl_thuyduong`
+-- Cơ sở dữ liệu: `btl`
 --
 
 -- --------------------------------------------------------
@@ -37,15 +37,16 @@ CREATE TABLE `admins` (
   `admin_address` text NOT NULL,
   `admin_about` text NOT NULL,
   `admin_contact` varchar(255) NOT NULL,
-  `admin_job` varchar(255) NOT NULL
+  `admin_job` varchar(255) NOT NULL,
+  `permission` int(11) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 --
 -- Đang đổ dữ liệu cho bảng `admins`
 --
 
-INSERT INTO `admins` (`admin_id`, `admin_name`, `admin_email`, `admin_username`, `admin_pass`, `admin_image`, `admin_address`, `admin_about`, `admin_contact`, `admin_job`) VALUES
-(1, 'admin', 'admin@gmail.com', 'Admin', '4FD3D0F47E7A98FF5B585D15025BAC59BF53908F', 'meo.jpg', 'VN', 'Meo', '0924249999', 'HUMG');
+INSERT INTO `admins` (`admin_id`, `admin_name`, `admin_email`, `admin_username`, `admin_pass`, `admin_image`, `admin_address`, `admin_about`, `admin_contact`, `admin_job`, `permission`) VALUES
+(1, 'admin', 'admin@gmail.com', 'Admin', '21232f297a57a5a743894a0e4a801fc3', 'meo.jpg', 'VN', 'Meo', '0924249999', 'HUMG', 1);
 
 -- --------------------------------------------------------
 
@@ -67,6 +68,27 @@ CREATE TABLE `banner` (
 INSERT INTO `banner` (`banner_id`, `banner_name`, `banner_desc`, `banner_img`) VALUES
 (1, 'banner 1', 'banner 1', '1.png'),
 (2, 'banner 2', 'banner 2', '2.png');
+
+-- --------------------------------------------------------
+
+--
+-- Cấu trúc bảng cho bảng `box`
+--
+
+CREATE TABLE `box` (
+  `id` int(11) NOT NULL,
+  `title` text NOT NULL,
+  `icon` text NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+--
+-- Đang đổ dữ liệu cho bảng `box`
+--
+
+INSERT INTO `box` (`id`, `title`, `icon`) VALUES
+(1, 'Phục vụ tốt nhất', 'heart'),
+(3, 'Giá tốt nhất', 'tag'),
+(4, 'Chính hãng 100%', 'thumbs-up');
 
 -- --------------------------------------------------------
 
@@ -96,12 +118,19 @@ INSERT INTO `boxes_section` (`box_id`, `box_title`, `box_desc`) VALUES
 --
 
 CREATE TABLE `cart` (
-  `p_id` int(10) NOT NULL,
+  `p_id` int(11) NOT NULL,
   `ip_add` varchar(255) NOT NULL,
   `qty` int(10) NOT NULL,
   `p_price` varchar(255) NOT NULL,
   `size` text NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+--
+-- Đang đổ dữ liệu cho bảng `cart`
+--
+
+INSERT INTO `cart` (`p_id`, `ip_add`, `qty`, `p_price`, `size`) VALUES
+(53, '::1', 1, '', 'S');
 
 -- --------------------------------------------------------
 
@@ -110,7 +139,7 @@ CREATE TABLE `cart` (
 --
 
 CREATE TABLE `categories` (
-  `cat_id` int(10) NOT NULL,
+  `cat_id` int(11) NOT NULL,
   `cat_title` varchar(255) NOT NULL,
   `cat_img` varchar(255) NOT NULL,
   `cat_desc` varchar(255) NOT NULL
@@ -128,6 +157,27 @@ INSERT INTO `categories` (`cat_id`, `cat_title`, `cat_img`, `cat_desc`) VALUES
 (5, 'Giày dép nữ', '13.png', 'Giày dép nữ'),
 (6, 'Túi ví nữ', '14.png', 'Túi ví nữ'),
 (7, 'Phụ kiện & Trang sức Nữ', '15.png', 'Phụ kiện & Trang sức Nữ');
+
+-- --------------------------------------------------------
+
+--
+-- Cấu trúc bảng cho bảng `contact`
+--
+
+CREATE TABLE `contact` (
+  `id` int(11) NOT NULL,
+  `name` text NOT NULL,
+  `subject` text NOT NULL,
+  `message` text NOT NULL,
+  `email` text NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+--
+-- Đang đổ dữ liệu cho bảng `contact`
+--
+
+INSERT INTO `contact` (`id`, `name`, `subject`, `message`, `email`) VALUES
+(10, 'z', 'a', 'a', 'phuonghole121201@gmail.com');
 
 -- --------------------------------------------------------
 
@@ -152,9 +202,7 @@ CREATE TABLE `customers` (
 --
 
 INSERT INTO `customers` (`customer_id`, `customer_name`, `customer_email`, `customer_contact`, `customer_username`, `customer_pass`, `customer_address`, `customer_image`, `customer_ip`) VALUES
-(1, 'KRD', 'krd@gmail.com', '0975632866', 'KRD', '87acec17cd9dcd20a716cc2cf67417b71c8a7016',' Hà Nội, Việt Nam ', 'meo.jpg', '127.0.0.1');
-
-
+(1, 'KRD', 'krd@gmail.com', '0975632866', 'KRD', '87acec17cd9dcd20a716cc2cf67417b71c8a7016', ' Hà Nội, Việt Nam ', 'meo.jpg', '127.0.0.1');
 
 -- --------------------------------------------------------
 
@@ -210,6 +258,75 @@ INSERT INTO `logo` (`logo_id`, `logo_name`, `logo_desc`, `logo_image`) VALUES
 -- --------------------------------------------------------
 
 --
+-- Cấu trúc bảng cho bảng `network`
+--
+
+CREATE TABLE `network` (
+  `id` int(11) NOT NULL,
+  `icon` text NOT NULL,
+  `link` text NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+--
+-- Đang đổ dữ liệu cho bảng `network`
+--
+
+INSERT INTO `network` (`id`, `icon`, `link`) VALUES
+(1, 'facebook', 'https://www.facebook.com/yenna0110'),
+(2, 'instagram', 'https://www.instagram.com/yenyoona2k1/');
+
+-- --------------------------------------------------------
+
+--
+-- Cấu trúc bảng cho bảng `order`
+--
+
+CREATE TABLE `order` (
+  `order_id` int(11) NOT NULL,
+  `user_id` int(11) NOT NULL,
+  `money` int(11) NOT NULL,
+  `receipt` int(11) NOT NULL,
+  `qty` int(11) NOT NULL,
+  `size` text NOT NULL,
+  `date` date NOT NULL,
+  `status` text NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+--
+-- Đang đổ dữ liệu cho bảng `order`
+--
+
+INSERT INTO `order` (`order_id`, `user_id`, `money`, `receipt`, `qty`, `size`, `date`, `status`) VALUES
+(6, 14, 0, 1264737008, 1, 'S', '2021-12-08', 'Đã trả'),
+(7, 14, 230002, 881084604, 1, 'S', '2021-12-08', 'pending');
+
+-- --------------------------------------------------------
+
+--
+-- Cấu trúc bảng cho bảng `pay`
+--
+
+CREATE TABLE `pay` (
+  `pay_id` int(11) NOT NULL,
+  `receipt` int(11) NOT NULL,
+  `money` int(11) NOT NULL,
+  `mode` text NOT NULL,
+  `code` int(11) NOT NULL,
+  `date` date NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+--
+-- Đang đổ dữ liệu cho bảng `pay`
+--
+
+INSERT INTO `pay` (`pay_id`, `receipt`, `money`, `mode`, `code`, `date`) VALUES
+(1, 0, 0, 'BIDV', 0, '0002-02-12'),
+(2, 0, 0, 'BIDV', 0, '0001-01-21'),
+(4, 0, 0, 'BIDV', 0, '0033-12-31');
+
+-- --------------------------------------------------------
+
+--
 -- Cấu trúc bảng cho bảng `payments`
 --
 
@@ -231,6 +348,40 @@ CREATE TABLE `payments` (
 INSERT INTO `payments` (`payment_id`, `invoice_no`, `amount`, `payment_mode`, `cardholder_name`, `card_number`, `expiration_date`, `payment_date`) VALUES
 (1, 1597909377, 558400, 'MBank (VISA)', 'duong', 999999999, '12/30', '25/11'),
 (2, 1188719202, 1396000, 'MBank (VISA)', 'duong', 999999999, '12/30', '25/11');
+
+-- --------------------------------------------------------
+
+--
+-- Cấu trúc bảng cho bảng `pending`
+--
+
+CREATE TABLE `pending` (
+  `order_id` int(11) NOT NULL,
+  `user_id` int(11) NOT NULL,
+  `receipt` int(11) NOT NULL,
+  `product_id` int(11) NOT NULL,
+  `qty` int(11) NOT NULL,
+  `size` text NOT NULL,
+  `status` text NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+--
+-- Đang đổ dữ liệu cho bảng `pending`
+--
+
+INSERT INTO `pending` (`order_id`, `user_id`, `receipt`, `product_id`, `qty`, `size`, `status`) VALUES
+(1, 9, 641369955, 11, 1, 'S', 'pending'),
+(2, 9, 641369955, 12, 1, 'S', 'Complete'),
+(3, 9, 641369955, 13, 1, 'S', 'pending'),
+(4, 9, 641369955, 14, 1, 'S', 'pending'),
+(5, 9, 641369955, 16, 1, 'S', 'pending'),
+(6, 9, 1658482237, 16, 1, 'S', 'Đã trả'),
+(7, 9, 7283551, 15, 1, 'S', 'pending'),
+(8, 9, 94525791, 16, 1, 'S', 'pending'),
+(9, 0, 1150215334, 15, 1, 'S', 'pending'),
+(10, 0, 1150215334, 16, 1, 'S', 'pending'),
+(11, 14, 1264737008, 17, 1, 'S', 'pending'),
+(12, 14, 881084604, 15, 1, 'S', 'pending');
 
 -- --------------------------------------------------------
 
@@ -377,6 +528,28 @@ INSERT INTO `slider` (`slider_id`, `slider_name`, `slider_image`) VALUES
 (3, 'c\r\n', 'banner3.png'),
 (4, 'd', 'banner4.png');
 
+-- --------------------------------------------------------
+
+--
+-- Cấu trúc bảng cho bảng `user`
+--
+
+CREATE TABLE `user` (
+  `user_id` int(11) NOT NULL,
+  `user_name` text NOT NULL,
+  `user_email` text NOT NULL,
+  `user_pass` text NOT NULL,
+  `user_phone` int(11) NOT NULL,
+  `user_ip` text NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+--
+-- Đang đổ dữ liệu cho bảng `user`
+--
+
+INSERT INTO `user` (`user_id`, `user_name`, `user_email`, `user_pass`, `user_phone`, `user_ip`) VALUES
+(0, 'KRD', 'krd@gmail.com', '21232f297a57a5a743894a0e4a801fc3', 901247861, '::1');
+
 --
 -- Chỉ mục cho các bảng đã đổ
 --
@@ -392,6 +565,12 @@ ALTER TABLE `admins`
 --
 ALTER TABLE `banner`
   ADD PRIMARY KEY (`banner_id`);
+
+--
+-- Chỉ mục cho bảng `box`
+--
+ALTER TABLE `box`
+  ADD PRIMARY KEY (`id`);
 
 --
 -- Chỉ mục cho bảng `boxes_section`
@@ -412,6 +591,12 @@ ALTER TABLE `categories`
   ADD PRIMARY KEY (`cat_id`);
 
 --
+-- Chỉ mục cho bảng `contact`
+--
+ALTER TABLE `contact`
+  ADD PRIMARY KEY (`id`);
+
+--
 -- Chỉ mục cho bảng `customers`
 --
 ALTER TABLE `customers`
@@ -430,10 +615,35 @@ ALTER TABLE `logo`
   ADD PRIMARY KEY (`logo_id`);
 
 --
+-- Chỉ mục cho bảng `network`
+--
+ALTER TABLE `network`
+  ADD PRIMARY KEY (`id`);
+
+--
+-- Chỉ mục cho bảng `order`
+--
+ALTER TABLE `order`
+  ADD PRIMARY KEY (`order_id`),
+  ADD KEY `user_id` (`user_id`);
+
+--
+-- Chỉ mục cho bảng `pay`
+--
+ALTER TABLE `pay`
+  ADD PRIMARY KEY (`pay_id`);
+
+--
 -- Chỉ mục cho bảng `payments`
 --
 ALTER TABLE `payments`
   ADD PRIMARY KEY (`payment_id`);
+
+--
+-- Chỉ mục cho bảng `pending`
+--
+ALTER TABLE `pending`
+  ADD PRIMARY KEY (`order_id`);
 
 --
 -- Chỉ mục cho bảng `pending_orders`
@@ -466,6 +676,12 @@ ALTER TABLE `slider`
   ADD PRIMARY KEY (`slider_id`);
 
 --
+-- Chỉ mục cho bảng `user`
+--
+ALTER TABLE `user`
+  ADD PRIMARY KEY (`user_id`);
+
+--
 -- AUTO_INCREMENT cho các bảng đã đổ
 --
 
@@ -482,16 +698,28 @@ ALTER TABLE `banner`
   MODIFY `banner_id` int(100) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
 
 --
+-- AUTO_INCREMENT cho bảng `box`
+--
+ALTER TABLE `box`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
+
+--
 -- AUTO_INCREMENT cho bảng `boxes_section`
 --
 ALTER TABLE `boxes_section`
   MODIFY `box_id` int(10) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
 
 --
+-- AUTO_INCREMENT cho bảng `cart`
+--
+ALTER TABLE `cart`
+  MODIFY `p_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=54;
+
+--
 -- AUTO_INCREMENT cho bảng `categories`
 --
 ALTER TABLE `categories`
-  MODIFY `cat_id` int(10) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=8;
+  MODIFY `cat_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=14;
 
 --
 -- AUTO_INCREMENT cho bảng `customers`
@@ -510,6 +738,12 @@ ALTER TABLE `customer_orders`
 --
 ALTER TABLE `logo`
   MODIFY `logo_id` int(100) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
+
+--
+-- AUTO_INCREMENT cho bảng `order`
+--
+ALTER TABLE `order`
+  MODIFY `order_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=8;
 
 --
 -- AUTO_INCREMENT cho bảng `payments`
