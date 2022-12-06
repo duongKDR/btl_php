@@ -27,15 +27,15 @@ include 'heard1.php';
             <div class="B-f form-clor">
               <h1 class="form-heading" style="text-align: center">Đăng nhập</h1>
               <div class="flex flex-column" style="margin: 10px;margin-bottom: 38px;">
-                <i class="far fa-customers"></i>
-                <input type="text" class="input-form pading" name="customers_email" placeholder="Nhập Email" />
+                <i class="far fa-user"></i>
+                <input type="text" class="input-form pading" name="user_email" placeholder="Nhập Email" />
               </div>
               <div class="flex flex-column" style="margin: 10px; margin-bottom: 38px;">
-                <input type="password" class="input-form pading" name="customers_pass" placeholder="Mật khẩu" />
+                <input type="password" class="input-form pading" name="user_pass" placeholder="Mật khẩu" />
                 <i class="form-group"></i>
 
                 <div id="eye">
-                  <a href="customers_forgot.php" class="format-password"> Quên mật khẩu? </a>
+                  <a href="user_forgot.php" class="format-password"> Quên mật khẩu? </a>
                 </div>
               </div>
               <div style="text-align: center" >
@@ -53,9 +53,9 @@ include 'heard1.php';
 </body>
 <?php
 if (isset($_POST['submit'])) {
-  $customers_email = $_POST['customers_email'];
-  $customers_pass = md5($_POST['customers_pass']);
-  $sql = "SELECT * FROM customers WHERE customers_email='$customers_email' AND customers_pass='$customers_pass'";
+  $user_email = $_POST['user_email'];
+  $user_pass = md5($_POST['user_pass']);
+  $sql = "SELECT * FROM user WHERE user_email='$user_email' AND user_pass='$user_pass'";
   $res = mysqli_query($con, $sql);
   $add_ip = getRealIpUser();
   $count = mysqli_num_rows($res);
@@ -69,11 +69,11 @@ if (isset($_POST['submit'])) {
   }
   // nếu đăng nhập chưa có địa chỉ ip thì
   if ($count == 1 and $count_2 == 0) {
-    $_SESSION['customers_email'] = $customers_email;
+    $_SESSION['user_email'] = $user_email;
     echo "<script>alert('Bạn đã đăng nhập thành công')</script>";
     echo "<script>window.open('checkout.php?my_orders','_self')</script>";
   } else {
-    $_SESSION['customers_email'] = $customers_email;
+    $_SESSION['user_email'] = $user_email;
     echo "<script>alert('Bạn đã đăng nhập thành công')</script>";
     echo "<script>window.open('checkout.php','_self')</script>";
   }

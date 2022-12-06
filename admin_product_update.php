@@ -25,7 +25,7 @@ Fixbug,testing:Lê Minh Phương
         <?php
                 if (isset($_GET['product_id'])) {
                         $product_id = $_GET['product_id'];
-                        $sql = "SELECT * from `product` where product_id='$product_id'";
+                        $sql = "SELECT * from `products` where product_id='$product_id'";
                         $res = mysqli_query($con, $sql);
                         $row = mysqli_fetch_array($res);
                         $product_title = $row['product_title'];
@@ -62,7 +62,7 @@ Fixbug,testing:Lê Minh Phương
                 $product_img = $_FILES['product_img']['name'];
                 $temp_name = $_FILES['product_img']['tmp_name'];
                 move_uploaded_file($temp_name, "./image/$product_img");
-                $sql = "UPDATE `product` SET 
+                $sql = "UPDATE `products` SET 
                 product_img='$product_img',
                 product_title='$product_title',
                 product_desc='$product_desc',

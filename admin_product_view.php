@@ -33,7 +33,7 @@ include('admin_sidebar.php');
         while ($row = mysqli_fetch_array($res)) {
             $product_id = $row['product_id'];
             $product_title = $row['product_title'];
-            $product_img = $row['product_img1'];
+            $product_img = $row['product_img'];
             $product_price = $row['product_price'];
             $product_keywords = $row['product_keywords'];
             $date = $row['date'];

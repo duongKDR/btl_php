@@ -1,8 +1,7 @@
 <!-- Chỉnh sửa CSS 
 Yêu cầu :Lấy dữ liệu css từ file ./css/style.css
         :Khi ấn nút cập nhật thì file css mới được thêm vào file css cũ
-Người làm :Lê Minh Phương
-Fixbug,testing:Lê Minh Phương
+
 -->
 <?php
 include('admin_header.php');

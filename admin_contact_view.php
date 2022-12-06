@@ -23,19 +23,19 @@ include('admin_sidebar.php');
             <th>Xóa phản hồi</th>
         </tr>
         <?php
-        $sql = "SELECT * FROM `contact`";
+        $sql = "SELECT * FROM `sender`";
         $res = mysqli_query($con, $sql);
         $i = 0;
         while ($row = mysqli_fetch_array($res)) {
-            $id = $row['id'];
-            $name = $row['name'];
-            $email = $row['email'];
-            $subject = $row['subject'];
-            $message = $row['message'];
+            $id = $row['sender_id'];
+            $name = $row['sender_c_name'];
+            $email = $row['sender_c_email'];
+            $subject = $row['sender_subject'];
+            $message = $row['sender_message'];
             $i++;
             echo "
             <tr>
-                <td>$i</td>
+                <td>$id</td>
                 <td>$name</td>
                 <td>$email</td>
                 <td>$subject</td>

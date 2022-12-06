@@ -420,7 +420,7 @@ CREATE TABLE `products` (
   `cat_id` int(10) NOT NULL,
   `date` timestamp NOT NULL DEFAULT current_timestamp() ON UPDATE current_timestamp(),
   `product_title` text NOT NULL,
-  `product_img1` text NOT NULL,
+  `product_img` text NOT NULL,
   `product_img2` text NOT NULL,
   `product_img3` text NOT NULL,
   `product_price` int(10) NOT NULL,
@@ -434,7 +434,7 @@ CREATE TABLE `products` (
 -- Đang đổ dữ liệu cho bảng `products`
 --
 
-INSERT INTO `products` (`product_id`, `p_cat_id`, `cat_id`, `date`, `product_title`, `product_img1`, `product_img2`, `product_img3`, `product_price`, `product_keywords`, `product_desc`, `product_label`, `product_sale`) VALUES
+INSERT INTO `products` (`product_id`, `p_cat_id`, `cat_id`, `date`, `product_title`, `product_img`, `product_img2`, `product_img3`, `product_price`, `product_keywords`, `product_desc`, `product_label`, `product_sale`) VALUES
 (1, 1, 2, '2022-12-05 08:11:34', 'Túi Nữ', 'tui.png', 'p1_2.jpg', 'p1_3.jpg', 81000, 'Túi Nữ', '<p>Sản phẩm 1</p>', 'new', 0),
 (2, 4, 2, '2022-12-05 08:11:38', 'Áo Hoodie Nữ', 'hoodi.png', 'p2_2.jpg', 'p2_3.jpg', 81000, 'Áo Hoodie Nữ', '<p>Test 123</p>', 'sale', 200000),
 (3, 2, 1, '2022-12-05 08:11:28', 'Son Môi Nội Địa Trung', '32.png', 'p3_2.jpg', 'p3_3.jpg', 81000, 'Son Môi Nội Địa Trung', '<p>Test sản phẩm 3</p>', 'sale', 450999),

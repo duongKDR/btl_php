@@ -59,7 +59,7 @@ include('header.php')
                         $res_2 = mysqli_query($con, $sql_2);
                         while ($row_2 = mysqli_fetch_array($res_2)) {
                             $product_title = $row_2['product_title'];
-                            $product_img = $row_2['product_img1'];
+                            $product_img = $row_2['product_img'];
                             $only_price = $row_2['product_price'];
                             $sub_total = $row_2['product_price'] * $qty;
                             $total += $sub_total;
@@ -180,7 +180,7 @@ include('header.php')
                 $product_id = $row['product_id'];
                 $product_title = $row['product_title'];
                 $product_price = $row['product_price'];
-                $product_img = $row['product_img1'];
+                $product_img = $row['product_img'];
                 echo "
                         <div class='cart__product'>
                             <a href='details.php?product_id=$product_id'>
