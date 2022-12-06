@@ -5,7 +5,7 @@ include('header.php');
 <?php
 if (isset($_GET['product_id'])) {
     $product_id = $_GET['product_id'];
-    $sql = "SELECT * FROM product WHERE product_id='$product_id'";
+    $sql = "SELECT * FROM products WHERE product_id='$product_id'";
     $res = mysqli_query($con, $sql);
     $row = mysqli_fetch_array($res);
     $p_cat_id = $row['p_cat_id'];
@@ -76,21 +76,7 @@ if (isset($_GET['product_id'])) {
                                 <option value="7">7</option>
                                 <option value="8">8</option>
                                 <option value="9">9</option>
-                                <option value="10">10</option>
-                                <option value="11">11</option>
-                                <option value="12">12</option>
-                                <option value="13">13</option>
-                                <option value="14">14</option>
-                                <option value="15">15</option>
-                                <option value="16">16</option>
-                                <option value="17">17</option>
-                                <option value="18">18</option>
-                                <option value="19">19</option>
-                                <option value="20">20</option>
-                                <option value="21">21</option>
-                                <option value="22">22</option>
-                                <option value="23">23</option>
-                          
+
                             </select>
                         </div>
                         <div class="details__size">
@@ -123,12 +109,12 @@ if (isset($_GET['product_id'])) {
                     </form>
                     <div class="details__tt">
                         <?php
-                        $sql = "select * from product order by rand() LIMIT 0,3";
+                        $sql = "select * from products order by rand() LIMIT 0,3";
                         $res = mysqli_query($con, $sql);
                         while ($row = mysqli_fetch_array($res)) {
                             $product_id = $row['product_id'];
                             $product_title = $row['product_title'];
-                            $product_img = $row['product_img'];
+                            $product_img = $row['product_img1'];
                             $product_price = $row['product_price'];
                             echo "
                             <div class='details__img'>
