@@ -15,8 +15,8 @@ Fixbug,testing:Lê Minh Phương
     <table>
         <tr>
             <th>Tiêu đề sản phẩm </th>
-            <th>Giá sản phẩm </th>
             <th>Mô tả sản phẩm </th>
+            <th>Giá sản phẩm </th>
             <th>Từ khóa sản phẩm </th>
             <th>Ảnh sản phẩm </th>
             <th>Ảnh sản phẩm </th>
