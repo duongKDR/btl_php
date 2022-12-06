@@ -7,7 +7,7 @@ Fixbug,testing:Lê Minh Phương
 
 session_start();
 include('db.php');
-include('header1.php')
+
 
 ?><div class="admin__login">
     <form method="post">

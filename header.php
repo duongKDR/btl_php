@@ -77,7 +77,7 @@ include('functions.php')
         </section>
         <section class="menu bottom">
             <nav class="blue_font">
-                <a href="index.html" style="text-decoration: none">
+                <a href="index.php" style="text-decoration: none">
                     BULE SKY </a>
             </nav>
             <form class="search"  method="get" action="search.php">
@@ -92,7 +92,7 @@ include('functions.php')
                 }
             ?>
             <nav class="shopping">
-                <div class="dropdown"><a href="giohang.html">
+                <div class="dropdown"><a href="cart.php">
                         <i class="fa-solid fa-cart-shopping"></i></a>
                     <div class="hidden tamgiac three">
                         <img src="image/lg.jpg" alt="">
@@ -113,7 +113,7 @@ include('functions.php')
                     while ($row = mysqli_fetch_array($res)) {
                         $product_id = $row['p_id'];
                         $qty = $row['qty'];
-                        $sql_2 = "select * from product where product_id='$product_id'";
+                        $sql_2 = "select * from products where product_id='$product_id'";
                         $res_2 = mysqli_query($con, $sql_2);
                         while ($row_2 = mysqli_fetch_array($res_2)) {
                             $sub_total = $row_2['product_price'] * $qty;
