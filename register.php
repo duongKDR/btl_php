@@ -1,56 +1,60 @@
 <?php
-$active = 'Account';
-include('header.php');
 
+include('heard1.php');
 ?>
-<div class="main">
-    <div class="shop">
-        <div class="shop__container">
-            <ul class="shop__breadcroumb">
-                <li><a href="index.php">Trang Chủ</a></li>
-                <li>Đăng kí</li>
-            </ul>
-            <?php
-            include('sidebar.php');
-            ?>
-            <div class="register">
-                <div class="register__title">
-                    đăng ký
+
+<body>
+    <div class="full">
+        <header class="sticky">
+            <section class="menu top" style="height: 84px; box-shadow: 0 6px 6px rgba(0, 0, 0, 0.06)">
+                <div class="row" style="width: 1200px; margin: 0 auto">
+                    <div class="header_1 clearfix">
+                        <div class="col-sm-2">
+                            <a href="index.html" style="text-decoration: none">
+                                <nav class="blue_font" style="color: deepskyblue; margin-top: 20px">
+                                    BULE SKY
+                                </nav>
+                            </a>
+                        </div>
+                    </div>
                 </div>
-                <form action="register.php" method="post" class="register__form">
-                    <label>
-                        Tên của bạn*
-                    </label>
-                    <input name="user_name" required type="text" placeholder="Nhập tên của bạn">
-                    <label>
-                        Email của bạn*
-                    </label>
-                    <input name="user_email" required type="email" placeholder="Nhập Email">
-                    <label>
-                        Mật khẩu*
-                    </label>
-                    <input name="user_pass" required type="password" placeholder="Nhập mật khẩu mới">
-                    <label>
-                        Mật khẩu*
-                    </label>
-                    <input name="user_pass_2" required type="password" placeholder="Nhập lại mật khẩu ">
-                    <label>
-                        Số điện thoại*
-                    </label>
-                    <input name="user_phone" required type="text" placeholder="Nhập số điện thoại" maxlength="10"
-                        minlength="10">
-                    <button type="submit" name="submit" class="btn">Đăng kí</button>
-                </form>
+            </section>
+        </header>
+        <div style="background-color: deepskyblue">
+            <div class="logo flex">
+                <div class="flex login_right">
+                    <form action="register.php" method="post" class="register__form">
+                        <div class="B-f form-clor" style ="height: 430px">
+                            <h1 class="form-heading" style="text-align: center">Đăng nhập</h1>
+                            <div class="flex flex-column" style="margin: 10px;margin-bottom: 38px;">
+                                <input type="text" class="input-form pading" name="user_name" placeholder="Nhập tên của bạn" />
+                            </div>
+                            <div class="flex flex-column" style="margin: 10px;margin-bottom: 38px;">
+                                <input class="input-form pading" name="user_phone" required type="text" placeholder="Nhập số điện thoại" maxlength="10" minlength="10">
+                            </div>
+                            <div class="flex flex-column" style="margin: 10px;margin-bottom: 38px;">
+                                <input name="user_email" class="input-form pading" required type="email" placeholder="Nhập Email">
+                            </div>
+                            <div class="flex flex-column" style="margin: 10px; margin-bottom: 38px;">
+                                <input class="input-form pading" name="user_pass" required type="password" placeholder="Nhập mật khẩu ">
+                                <i class="form-group"></i>
+                            </div>
+                            <div class="flex flex-column" style="margin: 10px;margin-bottom: 38px;">
+                                <input name="user_pass_2" class="input-form pading" required type="password" placeholder="Nhập lại mật khẩu ">
+                            </div>
+
+                            <div style="text-align: center">
+                                <button type="submit" name="submit" class="btn">Đăng kí</button>
+                            </div>
+
+                        </div>
+                    </form>
+                </div>
             </div>
         </div>
-
     </div>
-</div>
-<?php
+</body>
 
-include('footer.php');
-
-?>
 <?php
 if (isset($_POST['submit'])) {
     $user_name = $_POST['user_name'];

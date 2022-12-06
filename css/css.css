@@ -31,10 +31,11 @@
   margin: 0 auto;
   width: 1200px;
   justify-content: flex-end;
+  display: flex;
 }
 
 .logo {
-  background-image: url("../img/logo-bl.jpg");
+  background-image: url("../image/logo-bl.jpg");
   background-size: cover;
   z-index: 3;
   background-repeat: no-repeat;

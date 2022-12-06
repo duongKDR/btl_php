@@ -43,7 +43,7 @@ img {
 }
 
 .header__btn {
-  background-color: #ff9900;
+  background-color: #f1f0ee;
   padding: 4px;
   margin: 5px;
   display: inline-block;
@@ -1572,7 +1572,7 @@ button.btn {
   padding: 10px;
   border-radius: 10px;
   cursor: pointer;
-  background-color: rgb(255, 255, 9);
+  background-color: rgb(192, 246, 249);
 }
 
 button.btn:after {
@@ -1583,7 +1583,7 @@ button.btn:after {
   right: 0%;
   bottom: 0;
   height: 100%;
-  background: rgb(201, 136, 136);
+  background: rgb(23, 169, 199);
   z-index: -1;
 }
 

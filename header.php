@@ -61,10 +61,10 @@ include('functions.php')
 
                     </div>
                     </div>
-                    <li><a href="dangki.html">Đăng kí |</a></li>
+                    <li><a href="register.php">Đăng kí |</a></li>
                     <li><?php
                         if (!isset($_SESSION['user_email'])) {
-                            echo " <a href='login.php' class='header__link'>
+                            echo " <a href='user_login.php' class='header__link'>
                             Đăng nhập
                             </a>";
                         } else {
@@ -78,7 +78,7 @@ include('functions.php')
         </section>
         <section class="menu bottom">
             <nav class="blue_font">
-                <a href="index.html" style="text-decoration: none">
+                <a href="home.php" style="text-decoration: none">
                     BULE SKY </a>
             </nav>
             <form class="search">
@@ -96,7 +96,7 @@ include('functions.php')
                 <div class="dropdown"><a href="giohang.html">
                         <i class="fa-solid fa-cart-shopping"></i></a>
                     <div class="hidden tamgiac three">
-                        <img src="img/lg.jpg" alt="">
+                        <img src="image/lg.jpg" alt="">
                         <a href="checkout.php">
                     <?php
                     $ip_add = getRealIpUser();
