@@ -1,4 +1,4 @@
-            * {
+* {
   padding: 0;
   margin: 0;
   box-sizing: border-box;
@@ -26,7 +26,7 @@ img {
 /* Header */
 .header {
   height: 40px;
-  background-color: #000000;
+  background-color: #15afe3;
 }
 
 .header__container {
@@ -81,7 +81,7 @@ img {
 
 /* NavBar */
 .navbar {
-  background: #413b3b;
+  background: #15afe3;
   top: 0;
   position: sticky;
   height: 80px;
@@ -1712,20 +1712,20 @@ button.clicked {
   margin: 1.5%;
   background-color: white;
 }
-.terms h1{
+.terms h1 {
   padding: 20px;
-  height:100px;
-}            
-.pagination{
-  display:flex;
+  height: 100px;
+}
+.pagination {
+  display: flex;
   align-items: center;
   width: 80%;
-  margin:0 auto;
+  margin: 0 auto;
   justify-content: flex-end;
   padding-bottom: 20px;
 }
-.pagination li{
-  padding:5px;
+.pagination li {
+  padding: 5px;
   box-shadow: 0 0 5px rgb(201, 141, 141);
 }
 
