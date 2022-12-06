@@ -45,7 +45,7 @@ CREATE TABLE `admins` (
 --
 
 INSERT INTO `admins` (`admin_id`, `admin_name`, `admin_email`, `admin_username`, `admin_pass`, `admin_image`, `admin_address`, `admin_about`, `admin_contact`, `admin_job`) VALUES
-(1, 'Call me Su', 'Su@gmail.com', 'CallmeSupls', '4FD3D0F47E7A98FF5B585D15025BAC59BF53908F', 'AnhTuyet0706.jpg', 'VN', 'Không có việc gì là không làm được, khó khăn nào cũng vượt qua.<br>Không có việc gì là không làm được, khó khăn nào cũng vượt qua.<br>Không có việc gì là không làm được, khó khăn nào cũng vượt qua.<br>Cái gì quan trọng nói 3 lần !!', '0389999999', 'IT at HUMG');
+(1, 'admin', 'admin@gmail.com', 'Admin', '4FD3D0F47E7A98FF5B585D15025BAC59BF53908F', 'meo.jpg', 'VN', 'Meo', '0924249999', 'HUMG');
 
 -- --------------------------------------------------------
 
@@ -152,12 +152,9 @@ CREATE TABLE `customers` (
 --
 
 INSERT INTO `customers` (`customer_id`, `customer_name`, `customer_email`, `customer_contact`, `customer_username`, `customer_pass`, `customer_address`, `customer_image`, `customer_ip`) VALUES
-(1, 'Call me Su', 'Test1@gmail.com', '0389999999', 'callmesupls', '87acec17cd9dcd20a716cc2cf67417b71c8a7016', 'Học viện Quốc Phòng, Hoàng Quốc Việt,\nNghĩa Đô, Cầu Giấy, Hà Nội, Việt Nam ', 'AnhConGai1.jpg', '127.0.0.1'),
-(2, 'Iam Su', 'suyeuqdndvn@gmail.com', '0389999998', 'callmesu', '87acec17cd9dcd20a716cc2cf67417b71c8a7016', 'Học viện Quốc Phòng, Hoàng Quốc Việt,\nNghĩa Đô, Cầu Giấy, Hà Nội, Việt Nam ', 'Kotlin.jpg', '127.0.0.1'),
-(3, 'Su is me', 'Test2@gmail.com', '0389999997', 'callmesu1502', '87acec17cd9dcd20a716cc2cf67417b71c8a7016', 'Học viện Quốc Phòng, Hoàng Quốc Việt,\nNghĩa Đô, Cầu Giấy, Hà Nội, Việt Nam ', 'Logo_CNTT_HUMG.jpg', '::1'),
-(4, 'Tớ là Su ', 'Test3@gmail.com', '0389999996', 'callmesupls1502', '87acec17cd9dcd20a716cc2cf67417b71c8a7016', 'No Address', 'Logo_HUMG.jpg', '127.0.0.1'),
-(5, 'CallmeSupls Test', 'Test4@gmail.com', '0389999995', 'CallmeSuplsTest', '87acec17cd9dcd20a716cc2cf67417b71c8a7016', 'No Address', 'CoGiaoVatLy.jpg', '127.0.0.1'),
-(6, 'CallmeSupls Test Register', 'bephanhxinhgai@gmail.com', '0389999994', 'CallmeSuplsTestRegister', '87acec17cd9dcd20a716cc2cf67417b71c8a7016', 'No Address Test Register', 'User.jpg', '127.0.0.1');
+(1, 'KRD', 'krd@gmail.com', '0975632866', 'KRD', '87acec17cd9dcd20a716cc2cf67417b71c8a7016',' Hà Nội, Việt Nam ', 'meo.jpg', '127.0.0.1');
+
+
 
 -- --------------------------------------------------------
 
@@ -232,8 +229,8 @@ CREATE TABLE `payments` (
 --
 
 INSERT INTO `payments` (`payment_id`, `invoice_no`, `amount`, `payment_mode`, `cardholder_name`, `card_number`, `expiration_date`, `payment_date`) VALUES
-(1, 1597909377, 558400, 'MBank (VISA)', 'CALL ME SU', 999999999, '12/30', '25/11'),
-(2, 1188719202, 1396000, 'MBank (VISA)', 'CALL ME SU', 999999999, '12/30', '25/11');
+(1, 1597909377, 558400, 'MBank (VISA)', 'duong', 999999999, '12/30', '25/11'),
+(2, 1188719202, 1396000, 'MBank (VISA)', 'duong', 999999999, '12/30', '25/11');
 
 -- --------------------------------------------------------
 
@@ -348,16 +345,15 @@ CREATE TABLE `sender` (
 --
 
 INSERT INTO `sender` (`sender_id`, `sender_c_name`, `sender_c_email`, `sender_subject`, `sender_message`, `sender_date`) VALUES
-(1, 'Call me Su', 'test@gmail.com', 'Đánh giá về shop Su Store', 'Shop Su Store quá tuyệt vời, 10 điểm :))', '2022-11-27 01:22:17'),
-(2, 'Test xoá kiến', 'TestXoaYKien@gmail.com', 'Đánh giá về shop Su Store', 'Shop Su Store quá tuyệt vời, 10 điểm :))', '2022-11-27 01:46:49'),
-(3, 'Test 1', 'test1@gmail.com', 'Đánh giá về shop', 'Shop Su Store quá tuyệt vời, 10+1 điểm :))', '2022-11-27 01:47:36'),
-(4, 'Test 2', 'test2@gmail.com', 'Đánh giá về shop', 'Shop Su Store quá tuyệt vời, 10+2 điểm :))', '2022-11-27 01:47:57'),
-(5, 'Test 3', 'test3@gmail.com', 'Đánh giá về shop Su Store', 'Shop Su Store quá tuyệt vời, 10 điểm :))', '2022-11-27 01:48:30'),
-(6, 'Test 4', 'test4@gmail.com', 'Đánh giá về shop Su Store', 'Shop Su Store quá tuyệt vời, 10+3 điểm :))', '2022-11-27 01:49:03'),
-(7, 'Test 5', 'test5@gmail.com', 'Đánh giá về shop', 'Shop Su Store quá tuyệt vời, 10+4 điểm :))', '2022-11-27 01:49:44'),
-(8, 'Call me Su', 'suyeuqdndvn@gmail.com', 'Test gửi mail xem có kiểm tra về hộp thư hay không phần tiêu đề', 'Test gửi mail xem có kiểm tra về hộp thư hay không phần nội dung', '2022-11-27 13:25:16'),
-(9, 'Su', 'suyeuqdndvn@gmail.com', 'Đánh giá về shop Su Store test gửi mail', 'Shop Su Store quá tuyệt vời, 10 điểm :))', '2022-11-27 13:27:45'),
-(10, 'Test 1', 'test10@gmail.com', 'Đánh giá về shop Su Store', 'Shop Su Store quá tuyệt vời, 10 điểm :))', '2022-11-27 13:45:10');
+(1, 'duong', 'test@gmail.com', 'Đánh giá về shop Skyblue', 'Shop Skyblue quá tuyệt vời, 10 điểm :))', '2022-11-27 01:22:17'),
+(2, 'Test xoá kiến', 'TestXoaYKien@gmail.com', 'Đánh giá về shop Skyblue', 'Shop Skyblue quá tuyệt vời, 10 điểm :))', '2022-11-27 01:46:49'),
+(3, 'Test 1', 'test1@gmail.com', 'Đánh giá về shop', 'Shop Skyblue quá tuyệt vời, 10+1 điểm :))', '2022-11-27 01:47:36'),
+(4, 'Test 2', 'test2@gmail.com', 'Đánh giá về shop', 'Shop Skyblue quá tuyệt vời, 10+2 điểm :))', '2022-11-27 01:47:57'),
+(5, 'Test 3', 'test3@gmail.com', 'Đánh giá về shop Skyblue', 'Shop Skyblue quá tuyệt vời, 10 điểm :))', '2022-11-27 01:48:30'),
+(6, 'Test 4', 'test4@gmail.com', 'Đánh giá về shop Skyblue', 'Shop Skyblue quá tuyệt vời, 10+3 điểm :))', '2022-11-27 01:49:03'),
+(7, 'Test 5', 'test5@gmail.com', 'Đánh giá về shop', 'Shop Skyblue quá tuyệt vời, 10+4 điểm :))', '2022-11-27 01:49:44'),
+(8, 'duong', 'duong@gmail.com', 'Test gửi mail xem có kiểm tra về hộp thư hay không phần tiêu đề', 'Test gửi mail xem có kiểm tra về hộp thư hay không phần nội dung', '2022-11-27 13:25:16'),
+(9, 'Test 1', 'test10@gmail.com', 'Đánh giá về shop Skyblue', 'Shop Skyblue quá tuyệt vời, 10 điểm :))', '2022-11-27 13:45:10');
 
 -- --------------------------------------------------------
 

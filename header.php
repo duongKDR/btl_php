@@ -38,10 +38,10 @@ include('functions.php')
                         <li><i class="fa-regular fa-circle-question"></i><a href="contact.php"  >Liên hệ</a></li>
                         <div class="hidden boder">
                             <!-- <?php
-                            if (!isset($_SESSION['user_email'])) {
+                            if (!isset($_SESSION['user_name'])) {
                                 echo "Xin chào";
                             } else {
-                                echo " Xin chào: " . $_SESSION['user_email'] . "";
+                                echo " Xin chào: " . $_SESSION['user_name'] . "";
                             }
                             ?> -->
                         </div>
