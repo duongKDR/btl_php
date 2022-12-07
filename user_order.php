@@ -25,7 +25,7 @@ while ($row = mysqli_fetch_array($res)) {
     $product_qty = $row['qty'];
     // gán cho biến bằng với cột size
     $product_size = $row['size'];
-    $sql_2 = "select * from product where product_id='$product_id'";
+    $sql_2 = "select * from products where product_id='$product_id'";
     $res_2 = mysqli_query($con, $sql_2);
     while ($row_2 = mysqli_fetch_array($res_2)) {
         $sub_total = $row_2['product_price'] * $product_qty;

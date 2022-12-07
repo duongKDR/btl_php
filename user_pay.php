@@ -15,7 +15,9 @@ include('sidebar.php');
             Chọn phương thức thanh toán
         </h2>
     </div>
-
+    <a href="user_order.php?user_id=<?php echo $user_id ?>">
+        Thanh toán ngoại tuyến
+    </a>
     <a href="#.php">
         Thanh toán trực tuyến
         <img src="image/pay.png" alt="">
