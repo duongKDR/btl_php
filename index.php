@@ -228,7 +228,7 @@ include('header.php');
             <section class="with mgr suggest mg">
                 <p>GỢI Ý HÔM NAY</p>
             </section>
-
+            <div class=" " style="justify-content: center;display: flex;flex-wrap: wrap;">
             <section class="products">
 
                 <?php 
@@ -354,6 +354,7 @@ include('header.php');
                 <?php } ?>
 
             </section>
+            </div>
 
         </section>
     </main>
