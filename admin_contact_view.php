@@ -35,13 +35,13 @@ include('admin_sidebar.php');
             $i++;
             echo "
             <tr>
-                <td>$id</td>
+                <td>$i</td>
                 <td>$name</td>
                 <td>$email</td>
                 <td>$subject</td>
                 <td>$message</td>
                 <td>
-                    <a href='admin_contact_delete.php?id=$id'>Xóa</a>
+                    <a href='admin_contact_delete.php?sender_id=$id'>Xóa</a>
                 </td>
             </tr>
             ";

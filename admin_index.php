@@ -10,7 +10,7 @@ include('admin_sidebar.php');
 <div class="container">
     <div class="title">Bảng điều khiển</div>
     <?php 
-    $sql= "SELECT * FROM `customers`";
+    $sql= "SELECT * FROM `user`";
     $res = mysqli_query($con, $sql);
     $count = mysqli_num_rows($res);
     $sql_2= "SELECT * FROM `products`";

@@ -25,9 +25,7 @@ Yêu cầu :có thể linh hoạt
         <li>
             <a href="admin_pay_view.php"> Thanh toán </a>
         </li>
-        <li>
-            <a href="admin_css.php"> Chỉnh sửa CSS </a>
-        </li>
+        
         <li>
             <a href="admin_user_view.php"> Người dùng</a>
         </li>
@@ -55,9 +53,7 @@ Yêu cầu :có thể linh hoạt
         <li>
             <a href="admin_contact_view.php"> Phản Hồi</a>
         </li>
-        <li>
-            <a href="admin_box_view.php"> Khối</a>
-        </li>
+       
         <li>
             <a href="admin_network_view.php"> Mạng xã hội</a>
         </li>

@@ -48,7 +48,7 @@ include('header.php')
                         
                         echo "<div class='shop__product' id='output'>";
                         // in ra số sản phẩm theo trang sắp xếp theo id
-                        $sql = "select * from product order by product_id DESC LIMIT $start_from,$per_page";
+                        $sql = "select * from products order by product_id DESC LIMIT $start_from,$per_page";
                         $res = mysqli_query($con, $sql);
                         while ($row = mysqli_fetch_array($res)) {
                             $product_id = $row['product_id'];
@@ -91,7 +91,7 @@ include('header.php')
                     $row = mysqli_fetch_array($res);
                     $p_cat_title = $row['p_cat_title'];
                     $p_cat_desc = $row['p_cat_desc'];
-                    $sql_2 = "select * from product where p_cat_id='$p_cat_id'";
+                    $sql_2 = "select * from products where p_cat_id='$p_cat_id'";
                     $res_2 = mysqli_query($con, $sql_2);
 
                     $count = mysqli_num_rows($res_2);
@@ -206,22 +206,26 @@ include('header.php')
         <ul class="pagination">
             <?php
     
-            $sql = "select * from product";
+    $sql = "select * from products";
     
             $res = mysqli_query($con, $sql);
-    
+            
             $total = mysqli_num_rows($res);
-            // tính số trang ,hàm làm tròn lên
             $total_pages = ceil($total / $per_page);
+           
+            // tính số trang ,hàm làm tròn lên
             for ($i = 1; $i <= $total_pages; $i++) {
+
                 echo "<li><a href='shop.php?page=" . $i . "'> " . $i . " </a></li>";
             };
-    
-    
+            
+            
             ?>
 
-        </ul>
+</ul>
+
     </div>
+    <?php  echo $total_pages; ?>
 </div>
 </div>
 

@@ -15,11 +15,11 @@ include('admin_sidebar.php');
     <form action="admin_ad_add.php" method="post">
         <div class="form__group">
             <span>Email quản trị viên</span>
-            <input name="ad_email" type="email" required />
+            <input name="admin_email" type="email" required />
         </div>
         <div class="form__group">
             <span>Mật khẩu quản trị viên</span>
-            <input name="ad_pass" type="password" required />
+            <input name="admin_pass" type="password" required />
         </div>
         <div class="form__group">
             <span>Quyền quản trị viên</span>
@@ -37,13 +37,13 @@ include('admin_footer.php');
 ?>
 <?php
 if (isset($_POST['submit'])) {
-       $ad_email = $_POST['ad_email'];
+       $ad_email = $_POST['admin_email'];
        // echo $ad_email;
-       $ad_pass = md5($_POST['ad_pass']);
+       $ad_pass = md5($_POST['admin_pass']);
        // echo  $ad_pass;
        $permission = $_POST['permission'];
        // echo $permission;
-       $sql = "INSERT into `ad` (ad_email,ad_pass,permission) 
+       $sql = "INSERT into `admins` (admin_email,admin_pass,permission) 
     values ('$ad_email','$ad_pass','$permission')";
        $res = mysqli_query($con, $sql);
        if ($res) {

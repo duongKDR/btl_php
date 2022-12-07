@@ -36,15 +36,7 @@ include('functions.php')
 
                     <div class="dropdown">
                         <li><i class="fa-regular fa-circle-question"></i><a href="contact.php"  >Liên hệ</a></li>
-                        <div class="hidden boder">
-                            <!-- <?php
-                            if (!isset($_SESSION['user_name'])) {
-                                echo "Xin chào";
-                            } else {
-                                echo " Xin chào: " . $_SESSION['user_name'] . "";
-                            }
-                            ?> -->
-                        </div>
+                      
                     </div>
                     <li><i class="fa-brands fa-facebook"></i><i class="fa-brands fa-instagram"></i></li>
                 </ul>
@@ -60,7 +52,16 @@ include('functions.php')
 
                     </div>
                     </div>
-                    <li><a href="register.php">Đăng kí |</a></li>
+                    <li><a href="register.php">
+                    <?php
+                            if (!isset($_SESSION['user_email'])) {
+                                echo "Đăng kí |";
+                            } else {
+                                echo "" . $_SESSION['user_email'] . " | ";
+                            }
+                            ?> 
+                            
+                    </a></li>
                     <li><?php
                         if (!isset($_SESSION['user_email'])) {
                             echo " <a href='user_login.php' class='header__link'>

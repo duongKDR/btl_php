@@ -19,8 +19,8 @@ include('admin_sidebar.php');
                 $sql = "SELECT * from `admins` where admin_email='$ad_email'";
                 $res = mysqli_query($con, $sql);
                 $row = mysqli_fetch_array($res);
-                $permission= $row['permission'];
-                if ($permission == 1 ){
+                $permission1= $row['permission'];
+                if ($permission1 == 1 ){
                    echo "
                    <a href='admin_ad_add.php'>Thêm quản trị viên</a>  
                    ";
@@ -34,7 +34,7 @@ include('admin_sidebar.php');
             <th>Email quản trị viên</th>
             <th>Quyền hạn quản trị viên</th>
             <?php
-            if ($permission==1){
+            if ($permission1==1){
                 echo "                
                 <th>Xóa quản trị viên</th>
                 <th>Cập nhập quản trị viên</th>
@@ -59,13 +59,13 @@ include('admin_sidebar.php');
                    $permission
                </td>
                ";
-               if($permission==1){
+               if($permission1 ==1){
                    echo"
                <td>
-                <a href='admin_ad_delete.php?ad_id=$ad_id'>Xóa</a>
+                <a href='admin_ad_delete.php?admin_id=$ad_id'>Xóa</a>
                </td>
                <td>
-                <a href='admin_ad_update.php?ad_id=$ad_id'>Chỉnh sửa</a> 
+                <a href='admin_ad_update.php?admin_id=$ad_id'>Chỉnh sửa</a> 
                </td>
                <tr>
                ";
