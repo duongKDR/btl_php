@@ -10,9 +10,9 @@ include('heard1.php');
                 <div class="row" style="width: 1200px; margin: 0 auto">
                     <div class="header_1 clearfix">
                         <div class="col-sm-2">
-                            <a href="index.html" style="text-decoration: none">
+                            <a href="index.php" style="text-decoration: none">
                                 <nav class="blue_font" style="color: deepskyblue; margin-top: 20px">
-                                    BULE SKY
+                                    BLUE SKY
                                 </nav>
                             </a>
                         </div>
@@ -25,7 +25,7 @@ include('heard1.php');
                 <div class="flex login_right">
                     <form action="register.php" method="post" class="register__form">
                         <div class="B-f form-clor" style ="height: 430px">
-                            <h1 class="form-heading" style="text-align: center">Đăng nhập</h1>
+                            <h1 class="form-heading" style="text-align: center">Đăng ký</h1>
                             <div class="flex flex-column" style="margin: 10px;margin-bottom: 38px;">
                                 <input type="text" class="input-form pading" name="user_name" placeholder="Nhập tên của bạn" />
                             </div>
@@ -57,6 +57,7 @@ include('heard1.php');
 
 <?php
 if (isset($_POST['submit'])) {
+    echo '<h1>Test</h1>';
     $user_name = $_POST['user_name'];
     $user_email = $_POST['user_email'];
     $user_pass = md5($_POST['user_pass']);
@@ -67,7 +68,7 @@ if (isset($_POST['submit'])) {
         $sql = "INSERT INTO `user`(user_name,user_email,user_pass,user_phone,user_ip)
         VALUES ('$user_name','$user_email','$user_pass','$user_phone','$user_ip')
         ";
-        // echo $sql;
+        echo $sql;
         $res = mysqli_query($con, $sql);
         $sql_2 = "SELECT * FROM cart WHERE ip_add='$user_ip'";
         $res_2 = mysqli_query($con, $sql_2);

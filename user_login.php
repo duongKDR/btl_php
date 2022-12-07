@@ -10,9 +10,9 @@ include 'heard1.php';
         <div class="row" style="width: 1200px; margin: 0 auto">
           <div class="header_1 clearfix">
             <div class="col-sm-2">
-              <a href="index.html" style="text-decoration: none">
+              <a href="index.php" style="text-decoration: none">
                 <nav class="blue_font" style="color: deepskyblue; margin-top: 20px">
-                  BULE SKY
+                  BLUE SKY
                 </nav>
               </a>
             </div>
@@ -23,7 +23,7 @@ include 'heard1.php';
     <div style="background-color: deepskyblue">
       <div class="logo flex">
         <div class="flex login_right">
-          <form>
+        <form method="post">
             <div class="B-f form-clor">
               <h1 class="form-heading" style="text-align: center">Đăng nhập</h1>
               <div class="flex flex-column" style="margin: 10px;margin-bottom: 38px;">

@@ -7,6 +7,10 @@ Fixbug,testing:Lê Minh Phương
 
 session_start();
 include('db.php');
+<<<<<<< HEAD
+=======
+
+>>>>>>> aa3984a133dd06eec19c25adcd0fbdecaaa58941
 
 
 ?>

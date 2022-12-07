@@ -25,20 +25,19 @@ Yêu cầu :có thể linh hoạt
         <li>
             <a href="admin_pay_view.php"> Thanh toán </a>
         </li>
-        <li>
-            <a href="admin_css.php"> Chỉnh sửa CSS </a>
-        </li>
+        
         <li>
             <a href="admin_user_view.php"> Người dùng</a>
         </li>
         <li>
             <?php
             if (isset($_SESSION['ad_email'])) {
-                $ad_email = $_SESSION['ad_email'];
-                $sql = "SELECT * from `ad` where ad_email='$ad_email'";
+                $ad_email=$_SESSION['ad_email'];
+                $sql = "SELECT * from `admins` where admin_email='$ad_email'";
                 $res = mysqli_query($con, $sql);
                 $row = mysqli_fetch_array($res);
-                $permission = $row['permission'];
+                $permission= $row['permission'];
+      
                 if ($permission == 1 || $permission == 2) {
                     echo "
                    <a href='admin_ad_view.php'> Người quản trị viên</a>    
@@ -54,9 +53,7 @@ Yêu cầu :có thể linh hoạt
         <li>
             <a href="admin_contact_view.php"> Phản Hồi</a>
         </li>
-        <li>
-            <a href="admin_box_view.php"> Khối</a>
-        </li>
+       
         <li>
             <a href="admin_network_view.php"> Mạng xã hội</a>
         </li>

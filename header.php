@@ -22,7 +22,7 @@ include('functions.php')
     <script src='https://kit.fontawesome.com/a076d05399.js' crossorigin='anonymous'></script>
     <link rel="stylesheet" href="css/style.css" />
     <link rel="shortcut icon" href="image/sky.png" type="image/x-icon" />
-    <title>BULE SKY</title>
+    <title>BLUE SKY</title>
     
 
 </head>
@@ -36,15 +36,7 @@ include('functions.php')
 
                     <div class="dropdown">
                         <li><i class="fa-regular fa-circle-question"></i><a href="contact.php"  >Liên hệ</a></li>
-                        <div class="hidden boder">
-                            <!-- <?php
-                            if (!isset($_SESSION['user_name'])) {
-                                echo "Xin chào";
-                            } else {
-                                echo " Xin chào: " . $_SESSION['user_name'] . "";
-                            }
-                            ?> -->
-                        </div>
+                      
                     </div>
                     <li><i class="fa-brands fa-facebook"></i><i class="fa-brands fa-instagram"></i></li>
                 </ul>
@@ -60,7 +52,16 @@ include('functions.php')
 
                     </div>
                     </div>
-                    <li><a href="register.php">Đăng kí |</a></li>
+                    <li><a href="register.php">
+                    <?php
+                            if (!isset($_SESSION['user_email'])) {
+                                echo "Đăng kí |";
+                            } else {
+                                echo "" . $_SESSION['user_email'] . " | ";
+                            }
+                            ?> 
+                            
+                    </a></li>
                     <li><?php
                         if (!isset($_SESSION['user_email'])) {
                             echo " <a href='user_login.php' class='header__link'>
@@ -77,8 +78,8 @@ include('functions.php')
         </section>
         <section class="menu bottom">
             <nav class="blue_font">
-                <a href="index.html" style="text-decoration: none">
-                    BULE SKY </a>
+                <a href="index.php" style="text-decoration: none">
+                    BLUE SKY </a>
             </nav>
             <form class="search"  method="get" action="search.php">
                 <input type="text" placeholder="10.10 SĂN MÃ FREESHIP 0Đ" name="user_query" required>
@@ -92,7 +93,7 @@ include('functions.php')
                 }
             ?>
             <nav class="shopping">
-                <div class="dropdown"><a href="giohang.html">
+                <div class="dropdown"><a href="cart.php">
                         <i class="fa-solid fa-cart-shopping"></i></a>
                     <div class="hidden tamgiac three">
                         <img src="image/lg.jpg" alt="">
@@ -113,7 +114,7 @@ include('functions.php')
                     while ($row = mysqli_fetch_array($res)) {
                         $product_id = $row['p_id'];
                         $qty = $row['qty'];
-                        $sql_2 = "select * from product where product_id='$product_id'";
+                        $sql_2 = "select * from products where product_id='$product_id'";
                         $res_2 = mysqli_query($con, $sql_2);
                         while ($row_2 = mysqli_fetch_array($res_2)) {
                             $sub_total = $row_2['product_price'] * $qty;

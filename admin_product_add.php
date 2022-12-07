@@ -97,7 +97,7 @@ if (isset($_POST['submit'])) {
     // echo $product_img;
     $temp_name = $_FILES['product_img']['tmp_name'];
     move_uploaded_file($temp_name, "image/$product_img");
-    $sql = "insert into product (p_cat_id,cat_id,date,product_title,product_img,product_price,product_keywords,product_desc) 
+    $sql = "insert into products (p_cat_id,cat_id,date,product_title,product_img,product_price,product_keywords,product_desc) 
     values ('$product_cat','$cat',NOW(),'$product_title','$product_img','$product_price','$product_keywords','$product_desc')";
     $res = mysqli_query($con, $sql);
     if ($res) {

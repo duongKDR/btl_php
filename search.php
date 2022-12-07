@@ -25,7 +25,7 @@ include('header.php');
                 {
                     while($row_products=mysqli_fetch_array($run_products)){
                         $pro_title = $row_products['product_title'];
-                        $pro_img1 = $row_products['product_img1'];
+                        $pro_img1 = $row_products['product_img'];
                         $product_price = $row_products['product_price'];
                 
                 
@@ -191,7 +191,7 @@ include('header.php');
                         $run_products = mysqli_query($con,$get_products);
                         while($row_products=mysqli_fetch_array($run_products)){
                             $pro_title = $row_products['product_title'];
-                            $pro_img1 = $row_products['product_img1'];
+                            $pro_img1 = $row_products['product_img'];
                             $product_price = $row_products['product_price'];
                     ?>
                     <nav class="milk">
@@ -223,7 +223,7 @@ include('header.php');
                     $run_products = mysqli_query($con,$get_products);
                     while($row_products=mysqli_fetch_array($run_products)){
                         $pro_title = $row_products['product_title'];
-                        $pro_img1 = $row_products['product_img1'];
+                        $pro_img1 = $row_products['product_img'];
                         $product_price = $row_products['product_price'];
                 ?>
 
@@ -264,7 +264,7 @@ include('header.php');
                     $run_products = mysqli_query($con,$get_products);
                     while($row_products=mysqli_fetch_array($run_products)){
                         $pro_title = $row_products['product_title'];
-                        $pro_img1 = $row_products['product_img1'];
+                        $pro_img1 = $row_products['product_img'];
                         $product_price = $row_products['product_price'];
                 ?>
 
@@ -305,7 +305,7 @@ include('header.php');
                     $run_products = mysqli_query($con,$get_products);
                     while($row_products=mysqli_fetch_array($run_products)){
                         $pro_title = $row_products['product_title'];
-                        $pro_img1 = $row_products['product_img1'];
+                        $pro_img1 = $row_products['product_img'];
                         $product_price = $row_products['product_price'];
                 ?>
 

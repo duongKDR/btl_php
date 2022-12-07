@@ -23,15 +23,15 @@ include('admin_sidebar.php');
             <th>Xóa phản hồi</th>
         </tr>
         <?php
-        $sql = "SELECT * FROM `contact`";
+        $sql = "SELECT * FROM `sender`";
         $res = mysqli_query($con, $sql);
         $i = 0;
         while ($row = mysqli_fetch_array($res)) {
-            $id = $row['id'];
-            $name = $row['name'];
-            $email = $row['email'];
-            $subject = $row['subject'];
-            $message = $row['message'];
+            $id = $row['sender_id'];
+            $name = $row['sender_c_name'];
+            $email = $row['sender_c_email'];
+            $subject = $row['sender_subject'];
+            $message = $row['sender_message'];
             $i++;
             echo "
             <tr>
@@ -41,7 +41,7 @@ include('admin_sidebar.php');
                 <td>$subject</td>
                 <td>$message</td>
                 <td>
-                    <a href='admin_contact_delete.php?id=$id'>Xóa</a>
+                    <a href='admin_contact_delete.php?sender_id=$id'>Xóa</a>
                 </td>
             </tr>
             ";

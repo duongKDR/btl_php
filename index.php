@@ -104,83 +104,10 @@ include('header.php');
             </section>
 
             <section class="with shopmall">
-                <div class="mall">
-                    <a href="">SHOP MALL</a>|
-                    <img src="image/16.png" alt="">
-                    <p>7 Ngày Miễn Phí Trả Hàng</p>
-                    <img src="image/17.png" alt="">
-                    <p>Hàng Chính Hãng 100%</p>
-                    <img src="image/18.png" alt="">
-                    <p>Miễn Phí Vận Chuyển</p>
-                </div>
-                <div class="all">
-                    <a href="">Xem Tất Cả</a>
-                    <svg enable-background="new 0 0 11 11" viewBox="0 0 11 11" x="0" y="0" class="shop-svg-icon color">
-                        <path
-                            d="m2.5 11c .1 0 .2 0 .3-.1l6-5c .1-.1.2-.3.2-.4s-.1-.3-.2-.4l-6-5c-.2-.2-.5-.1-.7.1s-.1.5.1.7l5.5 4.6-5.5  4.6c-.2.2-.2.5-.1.7.1.1.3.2.4.2z">
-                        </path>
-                    </svg>
-                </div>
+              
+              
             </section>
-            <section class="slide_show mgr with">
-                <nav class="banner3 mgr ">
-                    <img src="image/19.png" alt="" width="">
-                    <!-- <a class="prev" onclick="plusSlides(-1)">❮</a>
-                    <a class="next" onclick="plusSlides(1)">❯</a> -->
-                </nav>
-                <nav class="grid" style="margin-left: 120px;">
-                    <nav class="lg">
-                        <img src="image/22.png" alt="">
-                        <div class="title ">
-                            <p>Giảm đến 50%</p>
-                        </div>
-                    </nav>
-                    <nav class="lg">
-                        <img src="image/22.png" alt="">
-                        <div class="title ">
-                            <p>Mua là có quà</p>
-                        </div>
-                    </nav>
-                    <nav class="lg">
-                        <img src="image/22.png" alt="">
-                        <div class="title ">
-                            <p>Siêu sale bùng nổ</p>
-                        </div>
-
-                    </nav>
-                    <nav class="lg">
-                        <img src="image/22.png" alt="">
-                        <div class="title ">
-                            <p>Mua là có quà</p>
-                        </div>
-                    </nav>
-                    <nav class="lg">
-                        <img src="image/26.png" alt="">
-                        <div class="title ">
-                            <p>Mua là có quà</p>
-                        </div>
-                    </nav>
-                    <nav class="lg">
-                        <img src="image/26.png" alt="">
-                        <div class="title ">
-                            <p>Deal trên tay</p>
-                        </div>
-                    </nav>
-                    <nav class="lg">
-                        <img src="image/26.png" alt="">
-                        <div class="title ">
-                            <p>Mua 1 tặng 1+</p>
-                        </div>
-                    </nav>
-                    <nav class="lg">
-                        <img src="image/27.png" alt="">
-                        <div class="title ">
-                            <p>Mua 1 được 9</p>
-                        </div>
-                    </nav>
-                </nav>
-            </section>
-
+       
 
             <section class="with shopmall">
                 <div class="caption mall">
@@ -202,7 +129,7 @@ include('header.php');
                         $run_products = mysqli_query($con,$get_products);
                         while($row_products=mysqli_fetch_array($run_products)){
                             $pro_title = $row_products['product_title'];
-                            $pro_img1 = $row_products['product_img1'];
+                            $pro_img1 = $row_products['product_img'];
                             $product_price = $row_products['product_price'];
                     ?>
 
@@ -228,7 +155,7 @@ include('header.php');
             <section class="with mgr suggest mg">
                 <p>GỢI Ý HÔM NAY</p>
             </section>
-
+            <div class=" " style="justify-content: center;display: flex;flex-wrap: wrap;">
             <section class="products">
 
                 <?php 
@@ -236,7 +163,7 @@ include('header.php');
                     $run_products = mysqli_query($con,$get_products);
                     while($row_products=mysqli_fetch_array($run_products)){
                         $pro_title = $row_products['product_title'];
-                        $pro_img1 = $row_products['product_img1'];
+                        $pro_img1 = $row_products['product_img'];
                         $product_price = $row_products['product_price'];
                 ?>
 
@@ -276,19 +203,23 @@ include('header.php');
                     $get_products = "select * from products order by 2 DESC LIMIT 0,4";
                     $run_products = mysqli_query($con,$get_products);
                     while($row_products=mysqli_fetch_array($run_products)){
+                        $product_id = $row_products['product_id'];
                         $pro_title = $row_products['product_title'];
-                        $pro_img1 = $row_products['product_img1'];
+                        $pro_img1 = $row_products['product_img'];
                         $product_price = $row_products['product_price'];
                 ?>
 
                 <nav class="balo dropdown">
                     <div class="anh">
-                        <img src="image/<?php echo $pro_img1; ?>" alt=" ">
-                        <div class="free_ship">
-                            <img src="image/logo5.png" alt="" h>
+                        <a href=details.php?product_id=<?php echo $product_id; ?> >
 
-                        </div>
-                        <div class="like">Yêu thích</div>
+                            <img src="image/<?php echo $pro_img1; ?>" alt=" ">
+                            <div class="free_ship">
+                                <img src="image/logo5.png" alt="" h>
+    
+                            </div>
+                            <div class="like">Yêu thích</div>
+                        </a>
                     </div>
                     <div class="ct">
                         <p> <?php echo $pro_title; ?> </p>
@@ -318,16 +249,19 @@ include('header.php');
                     $run_products = mysqli_query($con,$get_products);
                     while($row_products=mysqli_fetch_array($run_products)){
                         $pro_title = $row_products['product_title'];
-                        $pro_img1 = $row_products['product_img1'];
+                        $pro_img1 = $row_products['product_img'];
                         $product_price = $row_products['product_price'];
                 ?>
 
                 <nav class="balo dropdown">
                     <div class="anh">
+                        
                         <img src="image/<?php echo $pro_img1; ?>" alt=" ">
                         <div class="free_ship">
                             <img src="image/logo5.png" alt="" h>
 
+          
+                
                         </div>
                         <div class="like">Yêu thích</div>
                     </div>
@@ -351,6 +285,7 @@ include('header.php');
                 <?php } ?>
 
             </section>
+            </div>
 
         </section>
     </main>

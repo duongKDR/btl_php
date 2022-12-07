@@ -27,7 +27,7 @@ include('admin_sidebar.php');
         </tr>
         <?php
 
-        $sql = "SELECT * FROM `product`";
+        $sql = "SELECT * FROM `products`";
         $res = mysqli_query($con, $sql);
         $i = 0;
         while ($row = mysqli_fetch_array($res)) {

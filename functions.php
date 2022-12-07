@@ -1,7 +1,7 @@
 <?php function getRealIpUser()
 {
 switch (true) {
-    // id máy truy cập
+    // id máy truy cập de lu gio hang
 case (!empty($_SERVER['HTTP_X_REAL_IP'])):
 return $_SERVER['HTTP_X_REAL_IP'];
 case (!empty($_SERVER['HTTP_CLIENT_IP'])):
