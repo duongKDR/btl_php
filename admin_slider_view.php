@@ -12,7 +12,7 @@ include('admin_sidebar.php');
 <div class="container">
     <div class="title">
         Xem danh trình chiếu
-        <a href="admin_silder_add.php">Thêm sản phẩm</a>
+        <a href="admin_slider_add.php">Thêm sản phẩm</a>
     </div>
     <table>
         <tr>

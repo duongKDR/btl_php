@@ -71,11 +71,11 @@ if (isset($_POST['submit'])) {
   if ($count == 1 and $count_2 == 0) {
     $_SESSION['user_email'] = $user_email;
     echo "<script>alert('Bạn đã đăng nhập thành công')</script>";
-    echo "<script>window.open('checkout.php?my_orders','_self')</script>";
+    echo "<script>window.open('index.php','_self')</script>";
   } else {
     $_SESSION['user_email'] = $user_email;
     echo "<script>alert('Bạn đã đăng nhập thành công')</script>";
-    echo "<script>window.open('checkout.php','_self')</script>";
+    echo "<script>window.open('index.php','_self')</script>";
   }
 }
 ?>
