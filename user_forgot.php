@@ -15,7 +15,7 @@ include('header.php');
             ?>
             <div class="register">
                 <div class="register__title">
-                    đăng ký
+                      Đăng ký
                 </div>
                 <form action="user_forgot.php" method="post" class="register__form">
                     <label>

@@ -26,9 +26,9 @@ if (!isset($_SESSION['user_email'])) {
                         <th>Nội dung</th>
                     </tr>
                     <tr>
-                        <td>032854544 -BIDV -Chi nhánh cầu giấy</td>
-                        <td>Lê Minh Phương</td>
-                        <td>mã hóa đơn</td>
+                        <td>999993333 - TP bank</td>
+                        <td>Skybule</td>
+                        <td>mã hóa đơn </td>
                     </tr>
                 </table>
             </div>

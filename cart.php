@@ -1,14 +1,14 @@
-<!-- 
+<!--
 Yêu cầu :Hiện ra số lượng sản phẩm có trong giỏ hàng
         :In ra thông tin những sản phẩm đang có trong giỏ hàng
-        :Tính tổng giá tiền 1 sản phẩm 
+        :Tính tổng giá tiền 1 sản phẩm
         :Tính tổng giá tiền các sản phẩm
-        :Xóa sản phẩm khi chọn xóa và cập nhật lại giỏ hàng 
+        :Xóa sản phẩm khi chọn xóa và cập nhật lại giỏ hàng
         :Chọn ngẫu nhiên 3 sản phẩm bên dưới để người dùng ấn xem -->
 
 <?php
 $active = 'Cart';
-include('header.php')
+include 'header.php'
 
 ?>
 
@@ -25,17 +25,17 @@ include('header.php')
     <section class="slide_show mgr with ">
     <nav class="  cart ">
     <form action="cart.php" method="post" enctype="multipart/form-data" class="cart">
-  
+
         <div class=" cart_l ">
           <figcaption style="font-size: 2.6rem; "> <b>Giỏ Hàng</b></figcaption>
-     
+
             <div class="cart__desc">
                 <?php
-                $ip_add = getRealIpUser();
-                $sql = "select * from cart where ip_add='$ip_add'";
-                $res = mysqli_query($con, $sql);
-                $count = mysqli_num_rows($res);
-                ?>
+$ip_add = getRealIpUser();
+$sql = "select * from cart where ip_add='$ip_add'";
+$res = mysqli_query($con, $sql);
+$count = mysqli_num_rows($res);
+?>
                 <span>Bạn đã có <?php echo $count ?> sản phẩm trong giỏ hàng</span>
             </div>
                 <div class="table">
@@ -50,21 +50,21 @@ include('header.php')
                     </tr>
 
                     <?php
-                    $total = 0;
-                    while ($row = mysqli_fetch_array($res)) {
-                        $product_id = $row['p_id'];
-                        $size = $row['size'];
-                        $qty = $row['qty'];
-                        $sql_2 = "select * from products where product_id='$product_id'";
-                        $res_2 = mysqli_query($con, $sql_2);
-                        while ($row_2 = mysqli_fetch_array($res_2)) {
-                            $product_title = $row_2['product_title'];
-                            $product_img = $row_2['product_img'];
-                            $only_price = $row_2['product_price'];
-                            $sub_total = $row_2['product_price'] * $qty;
-                            $total += $sub_total;
-                        }
-                        echo "
+$total = 0;
+while ($row = mysqli_fetch_array($res)) {
+    $product_id = $row['p_id'];
+    $size = $row['size'];
+    $qty = $row['qty'];
+    $sql_2 = "select * from products where product_id='$product_id'";
+    $res_2 = mysqli_query($con, $sql_2);
+    while ($row_2 = mysqli_fetch_array($res_2)) {
+        $product_title = $row_2['product_title'];
+        $product_img = $row_2['product_img'];
+        $only_price = $row_2['product_price'];
+        $sub_total = $row_2['product_price'] * $qty;
+        $total += $sub_total;
+    }
+    echo "
                             <tr>
                             <td colspan='4'>
                                 <a href='details.php?product_id=$product_id'>
@@ -87,9 +87,9 @@ include('header.php')
                                $sub_total VND
                             </td>
                         </tr>";
-                    }
+}
 
-                    ?>
+?>
 
                     <tr>
                         <th colspan="3">Tổng toàn bộ</th>
@@ -97,7 +97,7 @@ include('header.php')
                         <th colspan="3"><?php echo $total; ?></th>
                     </tr>
                 </table>
-               
+
                 <div class="cart__button">
                     <div class="cart__continue">
                         <a href="index.php">
@@ -120,53 +120,62 @@ include('header.php')
                             </a>
                         </div>
                         <?php
-                        if (isset($_POST['update'])) {
-                            foreach ($_POST['remove'] as $remove_id) {
-                                $sql = "delete from cart where p_id='$remove_id'";
-                                $res = mysqli_query($con, $sql);
-                                if ($res) {
-                                    echo "<script>window.open('cart.php','_self')</script>";
-                                }
-                            }
-                        }
-                        ?>
+if (isset($_POST['update'])) {
+    foreach ($_POST['remove'] as $remove_id) {
+        $sql = "delete from cart where p_id='$remove_id'";
+        $res = mysqli_query($con, $sql);
+        if ($res) {
+            echo "<script>window.open('cart.php','_self')</script>";
+        }
+    }
+}
+?>
                         <div class="cart__checkout">
                             <a href="checkout.php">
                                 <button type="button">
                                     <span>
-                                        Giỏ hàng trong tài khoản
+                                        Thanh toán
                                     </span>
                                     <i class="fa fa-angle-right"></i>
                                 </button>
                             </a>
                         </div>
                     </div>
-                </div> 
+                </div>
                 </div>
             </div>
         </div>
 
         <div class=" cart_r ">
-        <figcaption style="text-align: center; font-size: 30px; margin: 5px;"> <b>Thống kê</b></figcaption>
+            <figcaption style="text-align: center; font-size: 30px; margin: 5px;"> <b>Thống kê</b></figcaption>
           <div class="table">
-          <div class=" dowload line">
-              <div class="font-cart ">Tổng tiền</div>
-              <div class="font-cart ">   <p><?php echo $total; ?> VND</p></div>
+                <div class=" dowload line">
+                    <div class="font-cart ">Tổng tiền</div>
+                    <div class="font-cart ">   <p><?php echo $total; ?> VND</p></div>
                 </div>
-          </div>   
+                
                 <div class=" dowload line">
                     <div class="font-cart ">Vận chuyển</div>
                     <div class="font-cart "> 0 </div>
 
                 </div>
-                
+
                 <div class=" dowload line coin-font ">
 
-                <div class="font-cart ">Toàn bộ</div>
+                    <div class="font-cart ">Toàn bộ</div>
+                    <div class="font-cart ">   <p><?php echo $total; ?> VND</p></div>
 
-                    
+
                 </div>
-            </div>
+                <div class=" dowload "style=" display: flex;justify-content: center;">
+                                <button type="button" class ="snip1457">
+                                    <span>
+                                        Thanh toán
+                                    </span>
+                                    <i class="fa fa-angle-right"></i>
+                                </button>
+                          
+            </div></div>
         </div>
         <div class="cart__like">
             <div class="cart_box">
@@ -174,14 +183,14 @@ include('header.php')
             </div>
             <?php
 
-            $sql = "select * from products order by rand() LIMIT 0,4";
-            $res = mysqli_query($con, $sql);
-            while ($row = mysqli_fetch_array($res)) {
-                $product_id = $row['product_id'];
-                $product_title = $row['product_title'];
-                $product_price = $row['product_price'];
-                $product_img = $row['product_img'];
-                echo "
+$sql = "select * from products order by rand() LIMIT 0,4";
+$res = mysqli_query($con, $sql);
+while ($row = mysqli_fetch_array($res)) {
+    $product_id = $row['product_id'];
+    $product_title = $row['product_title'];
+    $product_price = $row['product_price'];
+    $product_img = $row['product_img'];
+    echo "
                         <div class='cart__product'>
                             <a href='details.php?product_id=$product_id'>
                                 <img src='image/$product_img' alt=''>
@@ -199,8 +208,8 @@ include('header.php')
                         </div>
 
                         ";
-            }
-            ?>
+}
+?>
 
         </div>
     </form>
@@ -212,6 +221,6 @@ include('header.php')
 
     <?php
 
-    include('footer.php')
+include 'footer.php'
 
-    ?>
+?>

@@ -34,7 +34,7 @@
                 $p_cat_title
             </a>
         </li>
-    
+
     ";
                 }
 
@@ -129,6 +129,14 @@
     <script src="js/index.js"></script>
     <script src="js/light_and_dark.js"></script>
     <script src="js/to_top.js"></script>
+    <script>
+        /* Demo purposes only */
+        $(".hover").mouseleave(
+            function() {
+                $(this).removeClass("hover");
+            }
+        );
+    </script>
 </footer>
 </body>
 
