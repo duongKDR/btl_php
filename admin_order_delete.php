@@ -1,8 +1,6 @@
 <!-- Phần xóa đơn đặt hàng
 Yêu cầu :khi ấn vào nút xóa đơn đạt hàng thì sẽ xóa dữ liệu trong bảng cart
         :sau khi ấn xóa sẽ chuyển về trang xem
-Người làm :Nguyễn Thảo Nguyên
-Fixbug,testing:Lê Minh Phương
 -->
 <?php
 include('db.php');

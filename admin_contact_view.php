@@ -1,8 +1,7 @@
 <!-- Phần xem danh sách phản hồi
 Yêu cầu :In ra thông tin liên hệ bảng contact
         :Phải có nút xóa liên kết qua id
-Người làm :Nguyễn Thảo Nguyên
-Fixbug,testing:Lê Minh Phương
+
 -->
 <?php
 include('admin_header.php');

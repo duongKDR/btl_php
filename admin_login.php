@@ -1,17 +1,11 @@
 <!-- Phần đăng nhập admin 
 yêu cầu đăng nhập được ,hiện thị ra thông báo nếu sai
-Người làm :Lê Minh Phương
-Fixbug,testing:Lê Minh Phương
+
 -->
 <?php
 
 session_start();
 include('db.php');
-<<<<<<< HEAD
-=======
-
->>>>>>> aa3984a133dd06eec19c25adcd0fbdecaaa58941
-
 
 ?>
 

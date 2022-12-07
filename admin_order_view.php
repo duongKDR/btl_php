@@ -1,8 +1,6 @@
 <!-- Phần xem danh sách đơn đặt hàng
 Yêu cầu :In ra thông tin đơn đặt hàng của bảng order
         :Phải có nút xóa liên kết qua id
-Người làm :Nguyễn Thảo Nguyên
-Fixbug,testing:Lê Minh Phương
 -->
 <?php
 include('admin_header.php');

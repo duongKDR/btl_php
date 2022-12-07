@@ -1,8 +1,6 @@
     <!-- Phần xem danh sách thể loại
 Yêu cầu :In ra thông tin thể loại (bảng product_categories)
         :Phải có nút thêm,sửa,xóa liên kết qua id
-Người làm :Ngô Thị Ánh Tuyết
-Fixbug,testing:Lê Minh Phương
 -->
 <?php
 include('admin_header.php');

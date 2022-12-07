@@ -1,9 +1,6 @@
 <!-- Phần liên hệ
 Yêu cầu :Gửi ý kiến phản hồi qua gmail bằng hàm mail()
         :Tự động phản hồi gmail bằng hàm mail()
-Bug:Đã gửi nhưng admin chưa nhận được gmail
-Người làm:Lê Minh Phương
-Fixbug,testing:Lê Minh Phương
 -->
 <?php
 $active = 'Contact';

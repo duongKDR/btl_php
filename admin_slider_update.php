@@ -1,8 +1,6 @@
 <!-- Phần sửa trình chiếu
 Yêu cầu :Khi ấn vào nút cập nhật trình chiếu thì sẽ cập nhật lại bảng slider
         :sau khi ấn cập nhật sẽ chuyển về trang xem
-Người làm :Nguyễn Thu Yến
-Fixbug,testing:Lê Minh Phương
  -->
 <?php
 include('admin_header.php');

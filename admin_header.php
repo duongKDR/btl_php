@@ -3,8 +3,6 @@ Yêu cầu :Phải có phần kết nối với cơ sở dữ liệu
         :file có hàm session_start();
         :phải thêm điều kiện nếu chưa đăng nhập thì chuyển hướng sang file login.php (bổ sung sau khi có file login.php)
         :phải liên kết với icon,file css
-Người làm :Lê Minh Phương
-Fixbug,testing:Lê Minh Phương
  -->
 <?php
 session_start();

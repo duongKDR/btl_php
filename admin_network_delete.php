@@ -1,8 +1,7 @@
 <!-- Phần xóa mạng xã hội 
 Yêu cầu :khi ấn vào nút xóa mạng xã thì sẽ xóa dữ liệu trong bảng network
         :sau khi ấn xóa sẽ chuyển về trang xem
-Người làm :Trần Hồng Vân
-Fixbug,testing:Lê Minh Phương
+
 -->
 <?php
 include('db.php');

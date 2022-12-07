@@ -1,8 +1,7 @@
 <!-- Phần xem danh sách thanh toán
 Yêu cầu :In ra thông tin thanh toán bảng pay
         :Phải có nút xóa liên kết qua id
-Người làm :Nguyễn Thảo Nguyên
-Fixbug,testing:Lê Minh Phương
+
 -->
 <?php
 include('admin_header.php');

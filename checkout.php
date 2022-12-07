@@ -2,8 +2,6 @@
 Phần tài khoản 
 Yêu cầu :Khi chưa đăng nhập ấn vào sẽ hiện phần đăng nhập 
         :Khi đã đăng nhập ấn vào hiện phần thanh toán
-Người làm:Lê Minh Phương
-Fixbug,testing:Lê Minh Phương
  -->
 <?php
 $active = 'Account';

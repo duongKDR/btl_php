@@ -1,8 +1,6 @@
 <!-- Phần xem danh sách sản phẩm 
 Yêu cầu :In ra thông tin sản phẩm (table slider)
         :Phải có nút thêm,sửa,xóa liên kết qua id
-Người làm :Nguyễn Thu Yến
-Fixbug,testing:Lê Minh Phương
 -->
 <?php
 include('admin_header.php');

@@ -1,8 +1,6 @@
 <!-- Phần sửa mạng xã hội 
 Yêu cầu :Khi ấn vào nút cập nhật mạng xã hội thì sẽ cập nhật lại bảng box
         :sau khi ấn cập nhật sẽ chuyển về trang xem
-Người làm :Nguyễn Thu Yến 
-Fixbug,testing:Lê Minh Phương
  -->
 <?php
 include('admin_header.php');

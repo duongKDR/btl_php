@@ -1,8 +1,6 @@
 <!-- Phần xóa thể loại  
 Yêu cầu :khi ấn vào nút xóa thể loại thì sẽ xóa dữ liệu trong bảng product_categories
         :sau khi ấn xóa sẽ chuyển về trang xem
-Người làm :Ngô Thị Ánh Tuyết
-Fixbug,testing:Lê Minh Phương
 -->
 <?php
     include('db.php');

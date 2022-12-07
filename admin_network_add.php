@@ -1,9 +1,5 @@
-<!-- Phần thêm mạng xã hội 
-Yêu cầu:khi ấn vào nút mạng xã hội thì dữ liệu sẽ được thêm vào bảng network
-       :sau khi ấn thêm sẽ chuyển về trang xem
-Người làm :Trần Hồng Vân
-Fixbug,testing:Lê Minh Phương
--->
+
+
 <?php
 include('admin_header.php');
 include('admin_sidebar.php');

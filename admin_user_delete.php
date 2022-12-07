@@ -1,8 +1,6 @@
 <!-- Phần xóa người dùng
 Yêu cầu :khi ấn vào nút xóa người dùng thì sẽ xóa dữ liệu trong bảng user
         :sau khi ấn xóa sẽ chuyển về trang xem
-Người làm :Nguyễn Thảo Nguyên
-Fixbug,testing:Lê Minh Phương
 -->
 <?php
 include('db.php');

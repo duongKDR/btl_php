@@ -1,8 +1,7 @@
 <!-- Phần thêm khối 
 Yêu cầu:khi ấn vào nút thêm khối thì dữ liệu sẽ được thêm vào bảng box
        :sau khi ấn thêm sẽ chuyển về trang xem
-Người làm :Nguyễn Thu Yến 
-Fixbug,testing:Lê Minh Phương
+
 -->
 
 <?php

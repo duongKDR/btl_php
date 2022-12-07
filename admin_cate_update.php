@@ -1,8 +1,7 @@
 <!-- Phần sửa danh mục sản phẩm 
 Yêu cầu :Khi ấn vào nút cập nhật danh mục sản phẩm  thì sẽ cập nhật lại bảng categories
         :sau khi ấn cập nhật sẽ chuyển về trang xem
-Người làm :Ngô Thị Ánh Tuyết
-Fixbug,testing:Lê Minh Phương
+
  -->
 <?php
 include('admin_header.php');

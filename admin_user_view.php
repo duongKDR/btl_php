@@ -1,8 +1,6 @@
 <!-- Phần xem danh sách người dùng
 Yêu cầu :In ra thông tin người dùng bảng user
         :Phải có nút xóa liên kết qua id
-Người làm :Nguyễn Thảo Nguyên
-Fixbug,testing:Lê Minh Phương
 -->
 <?php
 include('admin_header.php');

@@ -1,7 +1,4 @@
-<!-- Bảng điều khiển
-Người làm :Lê Minh Phương(+call làm chung)
-Fixbug,testing:Lê Minh Phương
--->
+
 <?php
 include('admin_header.php');
 include('admin_sidebar.php');

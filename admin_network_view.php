@@ -1,8 +1,6 @@
 <!-- Phần xem danh sách mạng xã hội
 Yêu cầu :In ra thông tin mạng xã hội (table network)
         :Phải có nút thêm,sửa,xóa liên kết qua id
-Người làm :Trần Hồng Vân
-Fixbug,testing:Lê Minh Phương
 -->
 <?php
 include('admin_header.php');

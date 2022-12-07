@@ -1,8 +1,7 @@
 <!-- Phần thêm danh mục sản phẩm 
 Yêu cầu:khi ấn vào nút danh mục sản phẩm  thì dữ liệu sẽ được thêm vào bảng categories
        :sau khi ấn thêm sẽ chuyển về trang xem
-Người làm :Ngô Thị Ánh Tuyết 
-Fixbug,testing:Lê Minh Phương
+
 -->
 <?php
 include('admin_header.php');
