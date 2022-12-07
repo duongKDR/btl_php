@@ -20,9 +20,9 @@ include('admin_sidebar.php');
     $res_4 = mysqli_query($con, $sql_4);
     $count_4 = mysqli_num_rows($res_4);
     ?>
-    <div style="display:flex;">
-        <div class="box">
-            <div class="box__left">
+    <div class="" style="display:flex;">
+        <div class="box btn-8" style="width: 175px;height: 165px;margin-right: 8px;">
+            <div class="box__left ">
                 <a href="admin_user_view.php">Người dùng</a>
             </div>
             <div class="box__right">
@@ -31,7 +31,7 @@ include('admin_sidebar.php');
             ?>
             </div>
         </div>
-        <div class="box">
+        <div class="box btn-7" style="width: 175px;height: 165px;margin-right: 8px;">
             <div class="box__left">
                 <a href="admin_product_view.php">Sản phẩm</a>
             </div>
@@ -41,7 +41,7 @@ include('admin_sidebar.php');
             ?>
             </div>
         </div>
-        <div class="box">
+        <div class="box btn-13" style="width: 175px;height: 165px;margin-right: 8px;">
             <div class="box__left">
                 <a href="admin_order_view.php">Hóa đơn</a>
             </div>
@@ -51,7 +51,7 @@ include('admin_sidebar.php');
             ?>
             </div>
         </div>
-        <div class="box">
+        <div class="box btn-11" style="width: 175px;height: 165px;margin-right: 8px;">
             <div class="box__left">
                 <a href="admin_pay_view.php">Thanh toán</a>
             </div>
