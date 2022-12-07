@@ -104,83 +104,10 @@ include('header.php');
             </section>
 
             <section class="with shopmall">
-                <div class="mall">
-                    <a href="">SHOP MALL</a>|
-                    <img src="image/16.png" alt="">
-                    <p>7 Ngày Miễn Phí Trả Hàng</p>
-                    <img src="image/17.png" alt="">
-                    <p>Hàng Chính Hãng 100%</p>
-                    <img src="image/18.png" alt="">
-                    <p>Miễn Phí Vận Chuyển</p>
-                </div>
-                <div class="all">
-                    <a href="">Xem Tất Cả</a>
-                    <svg enable-background="new 0 0 11 11" viewBox="0 0 11 11" x="0" y="0" class="shop-svg-icon color">
-                        <path
-                            d="m2.5 11c .1 0 .2 0 .3-.1l6-5c .1-.1.2-.3.2-.4s-.1-.3-.2-.4l-6-5c-.2-.2-.5-.1-.7.1s-.1.5.1.7l5.5 4.6-5.5  4.6c-.2.2-.2.5-.1.7.1.1.3.2.4.2z">
-                        </path>
-                    </svg>
-                </div>
+              
+              
             </section>
-            <section class="slide_show mgr with">
-                <nav class="banner3 mgr ">
-                    <img src="image/19.png" alt="" width="">
-                    <!-- <a class="prev" onclick="plusSlides(-1)">❮</a>
-                    <a class="next" onclick="plusSlides(1)">❯</a> -->
-                </nav>
-                <nav class="grid" style="margin-left: 120px;">
-                    <nav class="lg">
-                        <img src="image/22.png" alt="">
-                        <div class="title ">
-                            <p>Giảm đến 50%</p>
-                        </div>
-                    </nav>
-                    <nav class="lg">
-                        <img src="image/22.png" alt="">
-                        <div class="title ">
-                            <p>Mua là có quà</p>
-                        </div>
-                    </nav>
-                    <nav class="lg">
-                        <img src="image/22.png" alt="">
-                        <div class="title ">
-                            <p>Siêu sale bùng nổ</p>
-                        </div>
-
-                    </nav>
-                    <nav class="lg">
-                        <img src="image/22.png" alt="">
-                        <div class="title ">
-                            <p>Mua là có quà</p>
-                        </div>
-                    </nav>
-                    <nav class="lg">
-                        <img src="image/26.png" alt="">
-                        <div class="title ">
-                            <p>Mua là có quà</p>
-                        </div>
-                    </nav>
-                    <nav class="lg">
-                        <img src="image/26.png" alt="">
-                        <div class="title ">
-                            <p>Deal trên tay</p>
-                        </div>
-                    </nav>
-                    <nav class="lg">
-                        <img src="image/26.png" alt="">
-                        <div class="title ">
-                            <p>Mua 1 tặng 1+</p>
-                        </div>
-                    </nav>
-                    <nav class="lg">
-                        <img src="image/27.png" alt="">
-                        <div class="title ">
-                            <p>Mua 1 được 9</p>
-                        </div>
-                    </nav>
-                </nav>
-            </section>
-
+       
 
             <section class="with shopmall">
                 <div class="caption mall">

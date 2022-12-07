@@ -12,7 +12,7 @@ include('heard1.php');
                         <div class="col-sm-2">
                             <a href="index.php" style="text-decoration: none">
                                 <nav class="blue_font" style="color: deepskyblue; margin-top: 20px">
-                                    BULE SKY
+                                    BLUE SKY
                                 </nav>
                             </a>
                         </div>

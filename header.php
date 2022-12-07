@@ -22,7 +22,7 @@ include('functions.php')
     <script src='https://kit.fontawesome.com/a076d05399.js' crossorigin='anonymous'></script>
     <link rel="stylesheet" href="css/style.css" />
     <link rel="shortcut icon" href="image/sky.png" type="image/x-icon" />
-    <title>BULE SKY</title>
+    <title>BLUE SKY</title>
     
 
 </head>
@@ -79,7 +79,7 @@ include('functions.php')
         <section class="menu bottom">
             <nav class="blue_font">
                 <a href="index.php" style="text-decoration: none">
-                    BULE SKY </a>
+                    BLUE SKY </a>
             </nav>
             <form class="search"  method="get" action="search.php">
                 <input type="text" placeholder="10.10 SĂN MÃ FREESHIP 0Đ" name="user_query" required>

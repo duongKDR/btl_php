@@ -1,12 +1,12 @@
 <footer>
     <section class="shop-footer">
         <div class="heading ">
-            <h1 class="shop-footer-heading">BULE SKY </h1>
-            <p class="shop-footer-content">BULE SKY - ứng dụng mua sắm trực tuyến thú vị,
+            <h1 class="shop-footer-heading">BLUE SKY </h1>
+            <p class="shop-footer-content">BLUE SKY - ứng dụng mua sắm trực tuyến thú vị,
                 tin cậy, an toàn và miễn phí! </p>
             <h1 class="shop-footer-heading">MUA SẮM VÀ BÁN HÀNG ONLINE ĐƠN GIẢN, NHANH CHÓNG VÀ AN TOÀN</h1>
             <p class="shop-footer-content">
-                Nếu bạn đang tìm kiếm một trang web để mua hàng trực tuyến thì BULE SKY là một sự lựa chọn
+                Nếu bạn đang tìm kiếm một trang web để mua hàng trực tuyến thì BLUE SKY là một sự lựa chọn
                 tuyệt vời dành cho bạn.
             </p>
             <h5 class="view-more">Xem thêm<i class="fa-regular fa-chevron-right"></i>
