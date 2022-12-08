@@ -29,7 +29,7 @@ if (isset($_GET['product_id'])) {
                 </li>
                 <li> <?php echo $product_title; ?> </li>
             </ul>
-            <section class="slide_show mgr with ">
+            <section class="slide_show mgr with " style="margin-top: 58px;">
             <div class="details">
                 <div class="details__img">
                     <a href="shop.php">
@@ -106,35 +106,48 @@ if (isset($_GET['product_id'])) {
                             </div>
                         </div>
                     </form>
-                    <div class="details__tt">
-                        <?php
-                        $sql = "select * from products order by rand() LIMIT 0,3";
-                        $res = mysqli_query($con, $sql);
-                        while ($row = mysqli_fetch_array($res)) {
-                            $product_id = $row['product_id'];
-                            $product_title = $row['product_title'];
-                            $product_img = $row['product_img'];
-                            $product_price = $row['product_price'];
-                            echo "
-                            <div class='details__img'>
-                                <a href='details.php?product_id=$product_id'>
-                                    <img src='image/$product_img' alt=''>
-                                </a>
-                                <div>
-                                <h3> <a href='details.php?product_id=$product_id'> $product_title </a> </h3>
-                                    
-                                <p class='price'> $ $product_price </p>
-                                </div>
-                            </div>
-                            
-                            ";
-                        }
-                        ?>
-                    </div>
+                   
                 </div>
             </div>
+            
         </div>
-                    </section>
+        <div class="cart__like">
+                    <div class="cart_box">
+                        <div class="flex four" style="font-size:1.5rem ;"> Sản phẩm tương tự</div>
+                    </div>
+                    <?php
+
+                    $sql = "select * from products order by rand() LIMIT 0,4";
+                    $res = mysqli_query($con, $sql);
+                    while ($row = mysqli_fetch_array($res)) {
+                        $product_id = $row['product_id'];
+                        $product_title = $row['product_title'];
+                        $product_price = $row['product_price'];
+                        $product_img = $row['product_img'];
+                        echo "
+                        <div class='cart__product'>
+                            <a href='details.php?product_id=$product_id'>
+                                <img src='image/$product_img' alt=''>
+                            </a>
+                            <div class='cart__text'>
+                            <a href='details.php?product_id=$product_id'>
+                                <h3>
+                                    $product_title
+                                </h3>
+                                </a>
+                                <p>
+                                    $product_price VND
+                                </p>
+                            </div>
+                        </div>
+
+                        ";
+                    }
+                    ?>
+
+                </div>
+     </div>
+        </section>
     </div>
 
 </div>
