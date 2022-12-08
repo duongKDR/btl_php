@@ -4,7 +4,7 @@ Yêu cầu :Khi chưa đăng nhập ấn vào sẽ hiện phần đăng nhập
         :Khi đã đăng nhập ấn vào hiện phần thanh toán
  -->
 <?php
-$active = 'Account';
+
 include('heard1.php');
 // echo "OK";
 ?>
@@ -17,7 +17,7 @@ include('heard1.php');
             </ul>
             <?php
             if (!isset($_SESSION['user_email'])) {
-                include("user_login.php");
+                include("user_login copy.php");
             } else {
                 include("user_pay.php");
             }
