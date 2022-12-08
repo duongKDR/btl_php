@@ -155,13 +155,14 @@ include 'header.php'
 
                         </div>
                         <div class=" dowload " style=" display: flex;justify-content: center;">
-                            <button type="button" class="snip1457">
-                                <span>
-                                    Thanh toán
-                                </span>
-                                <i class="fa fa-angle-right"></i>
-                            </button>
-
+                            <a href="checkout.php" class="btn btn-primary">
+                                <button name="thanhtoan" type="button" class="snip1457">
+                                    <span>
+                                        Thanh toán
+                                    </span>
+                                    <i class="fa fa-angle-right"></i>
+                                </button>
+                            </a>
 
                         </div>
                     </div>

@@ -1,8 +1,9 @@
 <?php
-
+// để dùng $_SESSION
 session_start();
 include('db.php');
-include('functions.php')
+include('functions.php');
+// echo "OK";
 ?>
 
 <!DOCTYPE html>
@@ -52,20 +53,19 @@ include('functions.php')
 
                     </div>
                     </div>
-                    <li>
+                    <li><a href="register.php">
                     <?php
                             if (!isset($_SESSION['user_email'])) {
-                                
-                                echo " <a href='register.php'> Đăng kí |";
+                                echo "Đăng kí |";
                             } else {
-                                echo " <a href='checkout.php'>" . $_SESSION['user_email'] . " | ";
+                                echo "" . $_SESSION['user_email'] . " | ";
                             }
                             ?> 
                             
                     </a></li>
                     <li><?php
                         if (!isset($_SESSION['user_email'])) {
-                            echo " <a href='user_login.php' class='header__link'>
+                            echo " <a href='checkout.php' class='header__link'>
                             Đăng nhập
                             </a>";
                         } else {
@@ -133,7 +133,11 @@ include('functions.php')
         </section>
         <section class="menu list">
             <ul>
-          
+                <!-- <li><a href="">Áo khoác</a> </li>
+                <li> <a href="">Túi xách nữ</a></li>
+                <li> <a href="">Áo croptop</a></li>
+                <li> <a href="">Dép</a></li>
+                <li> <a href="">Váy</a></li> -->
 
             </ul>
         </section>
