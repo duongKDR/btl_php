@@ -1,4 +1,5 @@
 <?php
+$active = 'Account';
 include('header.php');
 if (!isset($_SESSION['user_email'])) {
     echo "<script>window.open('checkout.php','_self')</script>";
@@ -46,6 +47,10 @@ if (!isset($_SESSION['user_email'])) {
                         Ngày giao dịch
                     </label>
                     <input type="date" required name="date" placeholder="Nhập ngày giao dịch">
+                    <label>
+                        Địa chỉ người nhận
+                    </label>
+                    <input type="text" required name="address" placeholder="Điền địa chỉ người nhận">
 
                     <button class="button" name="submit" type="submit">Xác nhận thanh toán</button>
                 </form>
@@ -65,7 +70,8 @@ if (isset($_POST['submit'])) {
     $mode = $_POST['mode'];
     $code = $_POST['code'];
     $date = $_POST['date'];
-    $sql = "INSERT into pay (receipt,money,mode,code,date) values ('$receipt','$money','$mode','$code','$date')";
+    $address = $_POST['address'];
+    $sql = "INSERT into pay (receipt,money,mode,code,date,address) values ('$receipt','$money','$mode','$code','$date','$address')";
     $res = mysqli_query($con, $sql);
     $complete = "Đã trả";
     $sql_2 = "UPDATE `order` set status='$complete' where order_id='$update_id'";
