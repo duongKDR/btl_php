@@ -1,7 +1,4 @@
-<!-- Phần liên hệ
-Yêu cầu :Gửi ý kiến phản hồi qua gmail bằng hàm mail()
-        :Tự động phản hồi gmail bằng hàm mail()
--->
+
 <?php
 
 include('header.php');

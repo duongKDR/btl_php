@@ -1,7 +1,4 @@
-<!-- Phần xem danh sách sản phẩm 
-Yêu cầu :In ra thông tin sản phẩm (table product)
-        :Phải có nút thêm,sửa,xóa liên kết qua id
--->
+
 <?php
 include('admin_header.php');
 include('admin_sidebar.php');

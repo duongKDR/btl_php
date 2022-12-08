@@ -1,7 +1,4 @@
-<!-- Phần thêm thể loại 
-Yêu cầu:khi ấn vào nút thêm thể loại thì dữ liệu sẽ được thêm vào bảng product_categories
-       :sau khi ấn thêm sẽ chuyển về trang xem
- --><?php
+<?php
     include('admin_header.php');
     include('admin_sidebar.php');
     ?>

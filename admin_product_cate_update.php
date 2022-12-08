@@ -1,7 +1,4 @@
-<!-- Phần sửa thể loại 
-Yêu cầu :Khi ấn vào nút cập nhật thể loại  thì sẽ cập nhật lại bảng product_categories
-        :sau khi ấn cập nhật sẽ chuyển về trang xem
- -->
+
 <?php
 include('admin_header.php');
 include('admin_sidebar.php');

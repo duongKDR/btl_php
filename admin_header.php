@@ -1,9 +1,4 @@
-<!--  Tách file từ file admin_index.php
-Yêu cầu :Phải có phần kết nối với cơ sở dữ liệu
-        :file có hàm session_start();
-        :phải thêm điều kiện nếu chưa đăng nhập thì chuyển hướng sang file login.php (bổ sung sau khi có file login.php)
-        :phải liên kết với icon,file css
- -->
+
 <?php
 session_start();
 include('db.php');

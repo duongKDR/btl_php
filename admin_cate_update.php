@@ -1,8 +1,4 @@
-<!-- Phần sửa danh mục sản phẩm 
-Yêu cầu :Khi ấn vào nút cập nhật danh mục sản phẩm  thì sẽ cập nhật lại bảng categories
-        :sau khi ấn cập nhật sẽ chuyển về trang xem
 
- -->
 <?php
 include('admin_header.php');
 include('admin_sidebar.php');

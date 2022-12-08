@@ -1,8 +1,4 @@
-<!-- Phần xóa khối 
-Yêu cầu :khi ấn vào nút xóa khối thì sẽ xóa dữ liệu trong bảng box
-        :sau khi ấn xóa sẽ chuyển về trang xem
 
--->
 <?php
 include('db.php');
 if (isset($_GET['id'])) {

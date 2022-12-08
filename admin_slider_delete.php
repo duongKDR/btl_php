@@ -1,7 +1,4 @@
-<!-- Phần xóa trình chiếu
-Yêu cầu :khi ấn vào nút xóa trình chiếu thì sẽ xóa dữ liệu trong bảng slider
-        :sau khi ấn xóa sẽ chuyển về trang xem
--->
+
 <?php
 include('db.php');
 if (isset($_GET['slider_id'])) {

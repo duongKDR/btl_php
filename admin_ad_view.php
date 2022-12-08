@@ -1,9 +1,4 @@
-<!--
-Phần xem danh sách admin 
-Yêu cầu :In ra thông tin admin (table ad)
-        :Phải có nút thêm,sửa,xóa liên kết qua id
 
--->
 <?php
 include('admin_header.php');
 include('admin_sidebar.php');

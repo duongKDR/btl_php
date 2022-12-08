@@ -1,8 +1,4 @@
-<!-- Phần sửa khối 
-Yêu cầu :Khi ấn vào nút cập nhật khối thì sẽ cập nhật lại bảng box
-        :sau khi ấn cập nhật sẽ chuyển về trang xem
 
- -->
 <?php
 include('admin_header.php');
 include('admin_sidebar.php');

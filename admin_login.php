@@ -1,7 +1,4 @@
-<!-- Phần đăng nhập admin 
-yêu cầu đăng nhập được ,hiện thị ra thông báo nếu sai
 
--->
 <?php
 
 session_start();

@@ -1,8 +1,4 @@
-<!-- Phần thêm trình chiếu 
-Yêu cầu:khi ấn vào nút thêm trình chiếu thì dữ liệu sẽ được thêm vào bảng slider
-       :sau khi ấn thêm sẽ chuyển về trang xem
 
- -->
 <?php
 include('admin_header.php');
 include('admin_sidebar.php');

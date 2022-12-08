@@ -1,7 +1,4 @@
-<!-- Phần thêm sản phẩm 
-Yêu cầu:khi ấn vào nút thêm sản phẩm thì dữ liệu sẽ được thêm vào bảng product
-       :sau khi ấn thêm sẽ chuyển về trang xem
- -->
+
 <?php
 include('admin_header.php');
 include('admin_sidebar.php');

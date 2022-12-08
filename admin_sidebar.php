@@ -1,7 +1,4 @@
-<!-- Menu tách từ file index.php 
-Yêu cầu :có thể linh hoạt 
-        :chỉ đến các file view,css,logout
--->
+
 <div class="navbar">
     <ul>
         <li>

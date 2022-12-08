@@ -1,5 +1,5 @@
 <?php
-// để dùng $_SESSION
+
 session_start();
 include('db.php');
 include('functions.php')
@@ -132,11 +132,7 @@ include('functions.php')
         </section>
         <section class="menu list">
             <ul>
-                <!-- <li><a href="">Áo khoác</a> </li>
-                <li> <a href="">Túi xách nữ</a></li>
-                <li> <a href="">Áo croptop</a></li>
-                <li> <a href="">Dép</a></li>
-                <li> <a href="">Váy</a></li> -->
+          
 
             </ul>
         </section>

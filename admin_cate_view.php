@@ -1,8 +1,4 @@
-<!-- Phần xem danh sách danh mục sản phẩm 
-Yêu cầu :In ra thông tin danh mục sản phẩm (table categories)
-        :Phải có nút thêm,sửa,xóa liên kết qua id
 
--->
 <?php
 include('admin_header.php');
 include('admin_sidebar.php');

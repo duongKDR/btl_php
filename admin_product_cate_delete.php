@@ -1,7 +1,4 @@
-<!-- Phần xóa thể loại  
-Yêu cầu :khi ấn vào nút xóa thể loại thì sẽ xóa dữ liệu trong bảng product_categories
-        :sau khi ấn xóa sẽ chuyển về trang xem
--->
+
 <?php
     include('db.php');
     if (isset($_GET['p_cat_id'])) {

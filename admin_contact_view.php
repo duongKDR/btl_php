@@ -1,8 +1,4 @@
-<!-- Phần xem danh sách phản hồi
-Yêu cầu :In ra thông tin liên hệ bảng contact
-        :Phải có nút xóa liên kết qua id
 
--->
 <?php
 include('admin_header.php');
 include('admin_sidebar.php');

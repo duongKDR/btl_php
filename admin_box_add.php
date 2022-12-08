@@ -1,8 +1,4 @@
-<!-- Phần thêm khối 
-Yêu cầu:khi ấn vào nút thêm khối thì dữ liệu sẽ được thêm vào bảng box
-       :sau khi ấn thêm sẽ chuyển về trang xem
 
--->
 
 <?php
 include('admin_header.php');

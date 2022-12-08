@@ -1,7 +1,4 @@
-<!-- Phần sửa trình chiếu
-Yêu cầu :Khi ấn vào nút cập nhật trình chiếu thì sẽ cập nhật lại bảng slider
-        :sau khi ấn cập nhật sẽ chuyển về trang xem
- -->
+
 <?php
 include('admin_header.php');
 include('admin_sidebar.php');

@@ -1,8 +1,4 @@
-<!-- Phần xóa danh mục sản phẩm  
-Yêu cầu :khi ấn vào nút xóa danh mục sản phẩm  thì sẽ xóa dữ liệu trong bảng categories
-        :sau khi ấn xóa sẽ chuyển về trang xem
 
--->
 <?php
 include('db.php');
 if (isset($_GET['cat_id'])) {

@@ -1,10 +1,3 @@
-<!--
-Yêu cầu :Hiện ra số lượng sản phẩm có trong giỏ hàng
-        :In ra thông tin những sản phẩm đang có trong giỏ hàng
-        :Tính tổng giá tiền 1 sản phẩm
-        :Tính tổng giá tiền các sản phẩm
-        :Xóa sản phẩm khi chọn xóa và cập nhật lại giỏ hàng
-        :Chọn ngẫu nhiên 3 sản phẩm bên dưới để người dùng ấn xem -->
 
 <?php
 

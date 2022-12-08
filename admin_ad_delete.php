@@ -1,8 +1,4 @@
-<!-- Phần xóa admin 
-Yêu cầu :khi ấn vào nút xóa admin thì sẽ xóa dữ liệu trong bảng ad
-        :sau khi ấn xóa sẽ chuyển về trang xem
 
--->
 <?php
 include('db.php');
 if (isset($_GET['ad_id'])) {
