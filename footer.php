@@ -62,51 +62,31 @@
         <div class="pay">
             <h5>THANH TOÁN</h5>
             <div class="cate text">
-                  <?php
-
-                $sql = "SELECT * FROM `cate_`";
-
-                $res = mysqli_query($con, $sql);
-              
-            
-              
-             
-                while ($row = mysqli_fetch_array($res)) {
-                    $id_img = $row['id_img'];
-                    $slider_image = $row['slider_image'];
-                
-
-                
-                  ?> 
-                
-                        <img src="image/<?php echo $slider_image; ?>" alt="">
-                 
-                </div>
-                
-            <?php } ?>
-                <a href="" class="boder"><img src="	img/40.png" alt=""></a>
+                <a href="" class="boder"><img src="image/37.png" alt=""></a>
+                <a href="" class="boder"><img src="image/38.png" alt=""></a>
+                <a href="" class="boder"><img src="image/39.png" alt=""></a>
+                <a href="" class="boder"><img src="	image/40.png" alt=""></a>
 
             </div>
 
         </div>
         <div class="text follow">
             <h5>THEO DÕI CHÚNG TÔI TRÊN</h5>
-            <li class="facebook"><a href=""><img src="img/41.png" alt=""><span>Facebook</span></a>
+            <li class="facebook"><a href=""><img src="" alt=""><span>Facebook</span></a>
             </li>
-            <li><a href=""><img src="img/42.png" alt=""><span>Instagram</span>
+            <li><a href=""><img src="g" alt=""><span>Instagram</span>
                 </a></li>
-            <li><a href=""><img src="img/43.png" alt=""><span>LinkedIn</span></a>
             </li>
         </div>
         <div class="">
             <h5>ĐƠN VỊ VẬN CHUYỂN</h5>
             <div class="cate text">
-                <a href="" class="boder"><img src="img/44.png" alt=""></a>
-                <a href="" class="boder"><img src="img/45.png" alt=""></a>
-                <a href="" class="boder"><img src="img/46.png" alt=""></a>
-                <a href="" class="boder"><img src="img/47.png" alt=""></a>
-                <a href="" class="boder"><img src="img/48.png" alt=""></a>
-                <a href="" class="boder"><img src="img/49.png" alt=""></a>
+                <a href="" class="boder"><img src="image/44.png" alt=""></a>
+                <a href="" class="boder"><img src="image/45.png" alt=""></a>
+                <a href="" class="boder"><img src="image/46.png" alt=""></a>
+                <a href="" class="boder"><img src="image/47.png" alt=""></a>
+                <a href="" class="boder"><img src="image/48.png" alt=""></a>
+                <a href="" class="boder"><img src="image/49.png" alt=""></a>
 
             </div>
     </section>
