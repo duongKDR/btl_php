@@ -1,4 +1,5 @@
 <?php
+$active = 'Home';
 include('header.php');
 ?>
 
@@ -161,6 +162,7 @@ include('header.php');
                     $get_products = "select * from products order by 1 DESC LIMIT 0,4";
                     $run_products = mysqli_query($con,$get_products);
                     while($row_products=mysqli_fetch_array($run_products)){
+                        $product_id = $row_products['product_id'];
                         $pro_title = $row_products['product_title'];
                         $pro_img1 = $row_products['product_img'];
                         $product_price = $row_products['product_price'];
@@ -168,6 +170,7 @@ include('header.php');
 
                 <nav class="balo dropdown">
                     <div class="anh">
+                        <a href="details.php?product_id=<?php echo $product_id; ?>" >
                         <img src="image/<?php echo $pro_img1; ?>" alt=" ">
                         <div class="free_ship">
                             <img src="image/logo5.png" alt="" h>
@@ -210,7 +213,7 @@ include('header.php');
 
                 <nav class="balo dropdown">
                     <div class="anh">
-                        <a href=details.php?product_id=<?php echo $product_id; ?> >
+                        <a href="details.php?product_id=<?php echo $product_id; ?>" >
 
                             <img src="image/<?php echo $pro_img1; ?>" alt=" ">
                             <div class="free_ship">
@@ -247,6 +250,7 @@ include('header.php');
                     $get_products = "select * from products order by 3 DESC LIMIT 0,4";
                     $run_products = mysqli_query($con,$get_products);
                     while($row_products=mysqli_fetch_array($run_products)){
+                        $product_id = $row_products['product_id'];
                         $pro_title = $row_products['product_title'];
                         $pro_img1 = $row_products['product_img'];
                         $product_price = $row_products['product_price'];
@@ -254,7 +258,7 @@ include('header.php');
 
                 <nav class="balo dropdown">
                     <div class="anh">
-                        
+                        <a href="details.php?product_id=<?php echo $product_id; ?>" >
                         <img src="image/<?php echo $pro_img1; ?>" alt=" ">
                         <div class="free_ship">
                             <img src="image/logo5.png" alt="" h>
