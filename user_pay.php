@@ -1,5 +1,6 @@
 <?php
-include('sidebar.php');
+
+include('user_sidebar.php');
 ?>
 <div class="pay">
 
@@ -23,3 +24,8 @@ include('sidebar.php');
         <img src="image/pay.png" alt="">
     </a>
 </div>
+<?php
+include('footer.php');
+
+
+?>

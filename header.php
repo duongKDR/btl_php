@@ -39,7 +39,20 @@ include('functions.php');
                         <li><i class="fa-regular fa-circle-question"></i><a href="contact.php"  >Liên hệ</a></li>
                       
                     </div>
-                    <li><i class="fa-brands fa-facebook"></i><i class="fa-brands fa-instagram"></i></li>
+                    <?php 
+                      $sql = "SELECT * FROM `network`";
+                
+                        $res = mysqli_query($con, $sql);
+                        while ($row = mysqli_fetch_array($res)) {
+                        $id = $row['id'];
+                        $link = $row['link'];
+                        
+                       echo" <li><a class='fa-brands fa-facebook' href='$link' > </a>";
+                        }?>
+               
+                    
+                    
+                   
                 </ul>
             </nav>
             <nav class="menu right mg">
@@ -142,3 +155,4 @@ include('functions.php');
             </ul>
         </section>
     </header>
+</body>

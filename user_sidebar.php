@@ -7,6 +7,9 @@
             <a href="user_offline.php" class="sidebar__link">Thanh toán ngoại tiếp </a>
         </li>
         <li class="sidebar__item">
+            <a href="checkout.php" class="sidebar__link">Thanh toán</a>
+        </li>
+        <li class="sidebar__item">
             <a href="user_pass.php" class="sidebar__link">Đổi mật khẩu </a>
         </li>
         <li class="sidebar__item">

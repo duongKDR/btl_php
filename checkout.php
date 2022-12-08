@@ -4,8 +4,9 @@ Yêu cầu :Khi chưa đăng nhập ấn vào sẽ hiện phần đăng nhập
         :Khi đã đăng nhập ấn vào hiện phần thanh toán
  -->
 <?php
+include('header.php');
 
-include('heard1.php');
+// include('heard1.php');
 // echo "OK";
 ?>
 <div class="main">

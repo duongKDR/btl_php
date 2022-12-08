@@ -10,9 +10,7 @@ include('header.php');
                 <li><a href="index.php">Trang Chủ</a></li>
                 <li>Liên hệ</li>
             </ul>
-            <?php
-            include('sidebar.php');
-            ?>
+           
             <div class="contact">
                 <div class="contact__title">
                     <h1>Liên hệ </h1>
@@ -51,36 +49,13 @@ include('header.php');
                         ";
                     $res = mysqli_query($con, $sql);
                     // echo  $sql;
-                    if (mail($receiver, $subject, $message, $email)) {
-                        echo "<h2> Tin nhắn của quý khách đã gửi thành công $email</h2>";
-                    } else {
-                        echo "Xin lỗi! hệ thống chưa nhậc được phản hồi của quý khách";
-                    }
-                    // tự động phản hồi đến email của khách hàng
-                    $subject = "Xin chào quý khách";
-                    $message = "Cảm ơn vì đã gửi tin nhắn cho chúng tôi. CÀNG SỚM CÀNG TỐT, chúng tôi sẽ trả lời tin nhắn của bạn";
-                    mail($email, $subject, $message, $receiver);
+                        echo "<script>alert('Tin nhắn của quý khách đã gửi thành công $email')</script>";
+                    
+                    
+          
 
 
-                    // hàm email()
-                    // https://www.codingnepalweb.com/configure-xampp-to-send-mail-from-localhost/
-                    // file php.ini 
-                    //     Chỉ dành cho Win32.
-                    // http : //php.net/smtp
-                    // SMTP = smtp.gmail.com
-                    // http : //php.net/smtp-port
-                    // smtp_port = 587
-                    // sendmail_from = your_email_address_here
-                    // sendmail_path = "\" C: \ xampp \ sendmail \ sendmail.exe \ "-t"
-                    // sendmain.ini
-                    // smtp_server = smtp.gmail.com
-                    // smtp_port = 587
-                    // error_logfile = error.log
-                    // debug_logfile = debug.log
-                    // auth_username = your_email_address_here
-                    // auth_password = your_password_here
-                    // force_sender = your_email_address_here
-
+                  
                 } ?>
 
 
