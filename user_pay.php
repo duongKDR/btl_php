@@ -1,4 +1,7 @@
 <?php
+if (!isset($_SESSION['user_email'])) {
+    header("location:user_login.php");
+}
 include('sidebar.php');
 ?>
 <div class="pay">

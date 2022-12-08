@@ -3,7 +3,7 @@ Yêu cầu :Gửi ý kiến phản hồi qua gmail bằng hàm mail()
         :Tự động phản hồi gmail bằng hàm mail()
 -->
 <?php
-$active = 'Contact';
+
 include('header.php');
 ?>
 <div class="main">

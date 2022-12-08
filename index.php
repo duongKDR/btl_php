@@ -1,5 +1,4 @@
 <?php
-$active = 'Home';
 include('header.php');
 ?>
 

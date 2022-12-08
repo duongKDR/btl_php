@@ -1,5 +1,4 @@
 <?php
-$active = 'Account';
 include('header.php');
 if (!isset($_SESSION['user_email'])) {
     echo "<script>window.open('checkout.php','_self')</script>";

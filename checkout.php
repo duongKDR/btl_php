@@ -1,10 +1,9 @@
-<!-- 
-Phần tài khoản 
-Yêu cầu :Khi chưa đăng nhập ấn vào sẽ hiện phần đăng nhập 
-        :Khi đã đăng nhập ấn vào hiện phần thanh toán
- -->
+
 <?php
-$active = 'Account';
+
+if (!isset($_SESSION['user_email'])) {
+    header("location:user_login.php");
+}
 include('header.php');
 ?>
 <div class="main">

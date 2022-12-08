@@ -1,5 +1,4 @@
 <?php
-$active = 'Shop';
 include('header.php')
 
 ?>

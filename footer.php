@@ -62,9 +62,29 @@
         <div class="pay">
             <h5>THANH TOÁN</h5>
             <div class="cate text">
-                <a href="" class="boder"><img src="img/37.png" alt=""></a>
-                <a href="" class="boder"><img src="img/38.png" alt=""></a>
-                <a href="" class="boder"><img src="img/39.png" alt=""></a>
+                  <?php
+
+                $sql = "SELECT * FROM `cate_`";
+
+                $res = mysqli_query($con, $sql);
+              
+            
+              
+                $res = mysqli_query($con, $sql);
+                while ($row = mysqli_fetch_array($res)) {
+                    $slider_name = $row['slider_name'];
+                    $slider_image = $row['slider_image'];
+                
+
+                
+                  ?> 
+                <div class="slideshows">
+                    <div class="fade">
+                        <img src="image/<?php echo $slider_image; ?>" alt="">
+                    </div>
+                </div>
+                
+            <?php } ?>
                 <a href="" class="boder"><img src="	img/40.png" alt=""></a>
 
             </div>
@@ -113,7 +133,7 @@
             <p>CHÍNH SÁCH TRẢ HÀNG VÀ HOÀN TIỀN</p>
         </div>
         <div class="photo">
-            <img src="img/dk.jpg" alt="">
+            <img src="image/dk.jpg" alt="">
             <p>Công ty BLUE SKY</p>
         </div>
         <div class="end-game photo">

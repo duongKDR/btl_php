@@ -7,7 +7,7 @@ Yêu cầu :Hiện ra số lượng sản phẩm có trong giỏ hàng
         :Chọn ngẫu nhiên 3 sản phẩm bên dưới để người dùng ấn xem -->
 
 <?php
-$active = 'Cart';
+
 include 'header.php'
 
 ?>
