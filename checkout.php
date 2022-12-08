@@ -1,10 +1,12 @@
-
+<!-- 
+Phần tài khoản 
+Yêu cầu :Khi chưa đăng nhập ấn vào sẽ hiện phần đăng nhập 
+        :Khi đã đăng nhập ấn vào hiện phần thanh toán
+ -->
 <?php
-
-if (!isset($_SESSION['user_email'])) {
-    header("location:user_login.php");
-}
-include('header.php');
+$active = 'Account';
+include('heard1.php');
+// echo "OK";
 ?>
 <div class="main">
     <div class="shop">
@@ -24,6 +26,3 @@ include('header.php');
 
     </div>
 </div>
-<?php
-include('footer.php');
-?>
