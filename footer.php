@@ -70,18 +70,17 @@
               
             
               
-                $res = mysqli_query($con, $sql);
+             
                 while ($row = mysqli_fetch_array($res)) {
-                    $slider_name = $row['slider_name'];
+                    $id_img = $row['id_img'];
                     $slider_image = $row['slider_image'];
                 
 
                 
                   ?> 
-                <div class="slideshows">
-                    <div class="fade">
+                
                         <img src="image/<?php echo $slider_image; ?>" alt="">
-                    </div>
+                 
                 </div>
                 
             <?php } ?>
