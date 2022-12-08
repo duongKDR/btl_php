@@ -2,7 +2,7 @@
 <?php
 session_start();
 include('db.php');
-if (!isset($_SESSION['ad_email'])) {
+if (!isset($_SESSION['admin_email'])) {
     header("location:admin_login.php");
 }
 
@@ -26,9 +26,9 @@ if (!isset($_SESSION['ad_email'])) {
         <div class="header__logo">Quản trị viên </div>
         <div class="header__user">
             <?php 
-            echo $_SESSION['ad_email'];
-            if (isset($_SESSION['ad_email'])) {
-                $ad_email=$_SESSION['ad_email'];
+            echo $_SESSION['admin_email'];
+            if (isset($_SESSION['admin_email'])) {
+                $ad_email=$_SESSION['admin_email'];
                 $sql = "SELECT * from `admins` where admin_email='$ad_email'";
                 $res = mysqli_query($con, $sql);
                 $row = mysqli_fetch_array($res);

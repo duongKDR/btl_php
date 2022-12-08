@@ -27,10 +27,12 @@ include('heard1.php');
                         <div class="B-f form-clor" style ="height: 430px">
                             <h1 class="form-heading" style="text-align: center">Đăng ký</h1>
                             <div class="flex flex-column" style="margin: 10px;margin-bottom: 38px;">
-                                <input type="text" class="input-form pading" name="user_name" placeholder="Nhập tên của bạn" />
+                                
+                                <input name="text" class="input-form pading" required type="user_name" placeholder="Nhập tên của bạn ">
                             </div>
                             <div class="flex flex-column" style="margin: 10px;margin-bottom: 38px;">
-                                <input class="input-form pading" name="user_phone" required type="text" placeholder="Nhập số điện thoại" maxlength="10" minlength="10">
+                            <input name="text" class="input-form pading" required type="user_phone" placeholder="Nhập số điện thoại" maxlength="10" minlength="10">
+                            
                             </div>
                             <div class="flex flex-column" style="margin: 10px;margin-bottom: 38px;">
                                 <input name="user_email" class="input-form pading" required type="email" placeholder="Nhập Email">

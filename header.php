@@ -52,12 +52,13 @@ include('functions.php')
 
                     </div>
                     </div>
-                    <li><a href="register.php">
+                    <li>
                     <?php
                             if (!isset($_SESSION['user_email'])) {
-                                echo "Đăng kí |";
+                                
+                                echo " <a href='register.php'> Đăng kí |";
                             } else {
-                                echo "" . $_SESSION['user_email'] . " | ";
+                                echo " <a href='checkout.php'>" . $_SESSION['user_email'] . " | ";
                             }
                             ?> 
                             
