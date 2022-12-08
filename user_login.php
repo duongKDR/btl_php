@@ -1,6 +1,7 @@
 <?php
 
-include 'heard1.php';
+// include 'heard1.php';
+
 ?>
 
 <body>
@@ -26,9 +27,9 @@ include 'heard1.php';
         <form method="post">
             <div class="B-f form-clor">
               <h1 class="form-heading" style="text-align: center">Đăng nhập</h1>
-              <div class="flex flex-column" style="margin: 10px;margin-bottom: 38px;display: flex;">
-                <i class="far fa-user"  style=" margin-top: 20px"></i>
-                <input type="text" class="input-form pading " name="user_email" placeholder="Nhập Email" />
+              <div class="flex flex-column" style="margin: 10px;margin-bottom: 38px;">
+                <i class="far fa-user"></i>
+                <input type="text" class="input-form pading" name="user_email" placeholder="Nhập Email" />
               </div>
               <div class="flex flex-column" style="margin: 10px; margin-bottom: 38px;">
                 <input type="password" class="input-form pading" name="user_pass" placeholder="Mật khẩu" />
