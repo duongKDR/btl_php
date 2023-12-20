@@ -1,4 +1,3 @@
-
 <div class="navbar">
     <ul>
         <li>

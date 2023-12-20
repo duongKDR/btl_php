@@ -16,7 +16,7 @@ include('admin_sidebar.php');
     $sql_3= "SELECT * FROM `order`";
     $res_3 = mysqli_query($con, $sql_3);
     $count_3 = mysqli_num_rows($res_3);
-    $sql_4= "SELECT * FROM `pay`";
+    $sql_4= "SELECT * FROM `payments`";
     $res_4 = mysqli_query($con, $sql_4);
     $count_4 = mysqli_num_rows($res_4);
     ?>

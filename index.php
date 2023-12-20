@@ -126,6 +126,7 @@ include('header.php');
                     $get_products = "select * from products order by rand() LIMIT 0,6";
                     $run_products = mysqli_query($con, $get_products);
                     while ($row_products = mysqli_fetch_array($run_products)) {
+                        $product_id = $row_products['product_id'];
                         $pro_title = $row_products['product_title'];
                         $pro_img1 = $row_products['product_img'];
                         $product_price = $row_products['product_price'];
@@ -134,6 +135,7 @@ include('header.php');
                         <!-- JHUHU -->
                         <nav class="milk">
                             <div class="milk size">
+                            <a href="details.php?product_id=<?php echo $product_id; ?>">
                                 <img src="image/<?php echo $pro_img1; ?>" alt="">
                                 <div class="sells">
                                     <p>Bán 49k+ /tháng</p>
@@ -154,7 +156,7 @@ include('header.php');
                 <p>GỢI Ý</p>
             </section>
             <div class=" ">
-                <section class="products" style="padding-left :20px">
+                <section class="products">
 
                     <?php
                     $get_products = "select * from products order by 1 DESC LIMIT 0,4";
@@ -291,6 +293,8 @@ include('header.php');
     </main>
 
 </body>
+
+
 <?php
 include('footer.php');
 ?>

@@ -15,8 +15,9 @@ include('admin_sidebar.php');
             <th>Số tiền đã thanh toán</th>
             <th>Phương thức thanh toán</th>
             <th>Tên chu tài khoản</th>
-            <th>Mã thanh toán</th>
+            <th>Mã giao dịch</th>
             <th>Ngày thanh toán</th>
+            <th>Địa chỉ nhận </th>
             <th>Xóa thanh toán</th>
         </tr>
         <?php
@@ -29,8 +30,9 @@ include('admin_sidebar.php');
             $money = $row['amount'];
             $mode = $row['payment_mode'];
             $namec = $row['cardholder_name'];
-            $code = $row['card_number'];
+            $mgd = $row['magiaodich'];
             $date = $row['payment_date'];
+            $address = $row['address'];
             $i++;
             echo "
             <tr>
@@ -39,10 +41,11 @@ include('admin_sidebar.php');
                 <td>$money</td>
                 <td>$mode</td> 
                 <td>$namec</td>
-                <td>$code</td>
+                <td>$mgd</td>
                 <td>$date</td>
+                <td>$address</td>
                 <td>
-                    <a href='admin_pay_delete.php?pay_id=$pay_id'>Xóa</a>
+                    <a href='admin_pay_delete.php?payment_id=$pay_id'>Xóa</a>
                 </td>
             </tr>
             ";

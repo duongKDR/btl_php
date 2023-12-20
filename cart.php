@@ -180,7 +180,54 @@ include 'header.php'
                         $product_title = $row['product_title'];
                         $product_price = $row['product_price'];
                         $product_img = $row['product_img'];
-                        echo "
+                        echo "y7    1!Q22-+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                            54
                         <div class='cart__product'>
                             <a href='details.php?product_id=$product_id'>
                                 <img src='image/$product_img' alt=''>

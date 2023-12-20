@@ -12,7 +12,7 @@ include('header.php');
             
             <div class="register">
                 <div class="register__title">
-                      Đăng ký
+                         Quên mật khẩu
                 </div>
                 <form action="user_forgot.php" method="post" class="register__form">
                     <label>
@@ -41,7 +41,6 @@ include('footer.php');
 if (isset($_POST['submit'])) {
     $user_email = $_POST['user_email'];
     $user_phone = $_POST['user_phone'];
-    $user_ip = getRealIpUser();
     $user_pass = '1' . (rand(100000, 1000000));
     echo "<script>alert('mật khẩu của bạn là $user_pass')</script>";
     $user_pass = md5($user_pass);

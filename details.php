@@ -64,7 +64,7 @@ if (isset($_GET['product_id'])) {
                         <div class="details__number">
                             <p>
                                 Số lượng sản phẩm
-                            </p>
+                            </p>66
                             <select name="product_qty">
                                 <option value="1">1</option>
                                 <option value="2">2</option>

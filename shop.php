@@ -50,7 +50,7 @@ if (!isset($_GET['p_cat'])) {
         $sql = "select * from products order by product_id DESC LIMIT $start_from,$per_page";
         $res = mysqli_query($con, $sql);
         while ($row = mysqli_fetch_array($res)) {
-            $product_id = $row['product_id'];
+            $product_i8d = $row['product_id'];
             $product_title = $row['product_title'];
             $product_price = $row['product_price'];
             $product_img = $row['product_img'];

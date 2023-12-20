@@ -40,7 +40,7 @@ include('header.php');
 
                     // Nhận tin nhắn từ gmail
                     $name = $_POST['name'];
-                    $receiver = "phuonghole121201@gmail.com";
+                    $receiver = "skyblue@gmail.com";
                     $subject = $_POST['subject'];
                     $message = $_POST['message'];
                     $email = $_POST['email'];
@@ -50,12 +50,7 @@ include('header.php');
                     $res = mysqli_query($con, $sql);
                     // echo  $sql;
                         echo "<script>alert('Tin nhắn của quý khách đã gửi thành công $email')</script>";
-                    
-                    
-          
-
-
-                  
+ 
                 } ?>
 
 

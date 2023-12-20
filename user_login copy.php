@@ -2,10 +2,23 @@
 
 // include 'heard1.php';
 ?>
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="css/css.css" />
+  <link rel="stylesheet" href="css/style.css" />
+  <link rel="stylesheet" href="css/style3.css" />
+  <link rel="shortcut icon" href="image/sky.png" type="image/x-icon" />
 
+  <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css' integrity='sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w==' crossorigin='anonymous'/>
+
+  <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" />
+  <title>BLUE SKY</title>
+</head>
 <body>
   <div class="full">
-    <header class="sticky">
+                       
       <section class="menu top" style="height: 84px; box-shadow: 0 6px 6px rgba(0, 0, 0, 0.06)">
         <div class="row" style="width: 1200px; margin: 0 auto">
           <div class="header_1 clearfix">
@@ -19,7 +32,7 @@
           </div>
         </div>
       </section>
-    </header>
+  
     <div style="background-color: deepskyblue">
       <div class="logo flex">
         <div class="flex login_right">

@@ -28,25 +28,32 @@ if (!isset($_SESSION['user_email'])) {
                     <label>
                         Hóa đơn
                     </label>
-                    <input type="text" required name="receipt" placeholder="Nhập số mã hóa đơn">
+                    <input type="text" required name="invoice_no" placeholder="Nhập số mã hóa đơn">
                     <label>
                         Số tiền đã gửi
                     </label>
-                    <input type="text" required name="money" placeholder="Nhập số tiền đã gửi">
+                    <input type="text" required name="amount" placeholder="Nhập số tiền đã gửi">
                     <label>
                         Phương thức thanh toán
                     </label>
-                    <select name="mode">
+                    <select name="payment_mode">
                         <option> BIDV</option>
+                        <option> TPBank</option>
+                        <option> MBBank</option>
                     </select>
                     <label>
                         Mã giao dịch
                     </label>
-                    <input type="text" required name="code" placeholder="Nhập mã giao dịch">
+                    <input type="text" required name="magiaodich" placeholder="Nhập mã giao dịch">
+                    <label>
+                       Tên chủ TK
+                    </label>
+                    <input type="text" required name="cardholder_name" placeholder="Tên chủ tài khoản">
+                    
                     <label>
                         Ngày giao dịch
                     </label>
-                    <input type="date" required name="date" placeholder="Nhập ngày giao dịch">
+                    <input type="date" required name="payment_date" placeholder="Nhập ngày giao dịch">
                     <label>
                         Địa chỉ người nhận
                     </label>
@@ -65,13 +72,14 @@ include('footer.php');
 
 if (isset($_POST['submit'])) {
     $update_id = $_GET['update_id'];
-    $receipt = $_POST['receipt'];
-    $money = $_POST['money'];
-    $mode = $_POST['mode'];
-    $code = $_POST['code'];
-    $date = $_POST['date'];
+    $receipt = $_POST['invoice_no'];
+    $money = $_POST['amount'];
+    $mode = $_POST['payment_mode'];
+    $mgd = $_POST['magiaodich'];
+    $namec = $_POST['cardholder_name'];
+    $date = $_POST['payment_date'];
     $address = $_POST['address'];
-    $sql = "INSERT into pay (receipt,money,mode,code,date,address) values ('$receipt','$money','$mode','$code','$date','$address')";
+    $sql = "INSERT into payments (invoice_no,amount,cardholder_name,payment_mode,magiaodich,payment_date,address) values ('$receipt','$money','$namec','$mode','$mgd','$date','$address')";
     $res = mysqli_query($con, $sql);
     $complete = "Đã trả";
     $sql_2 = "UPDATE `order` set status='$complete' where order_id='$update_id'";

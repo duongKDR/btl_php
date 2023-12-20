@@ -35,7 +35,7 @@ include('admin_sidebar.php');
                 <td>
                     <a href='admin_user_delete.php?user_id=$user_id'>Xóa</a>
                 </td>
-            </tr>; ";
+            </tr> ";
         }
         ?>
     </table>

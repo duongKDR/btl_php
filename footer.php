@@ -9,7 +9,7 @@
                 Nếu bạn đang tìm kiếm một trang web để mua hàng trực tuyến thì BLUE SKY là một sự lựa chọn
                 tuyệt vời dành cho bạn.
             </p>
-            <h5 class="view-more">Xem thêm<i class="fa-regular fa-chevron-right"></i>
+            <h5 class="view-more"><i class="fa-regular fa-chevron-right"></i>
             </h5>
         </div>
     </section>
@@ -46,7 +46,7 @@
     <section class="footer-category heading">
         <div class="text">
             <h5>CHĂM SÓC KHÁCH HÀNG</h5>
-            <li><a href="lienhe.html">Liên hệ</a></li>
+            <li><a href="contact.php">Liên hệ</a></li>
 
 
 
@@ -72,11 +72,16 @@
         </div>
         <div class="text follow">
             <h5>THEO DÕI CHÚNG TÔI TRÊN</h5>
-            <li class="facebook"><a href=""><img src="" alt=""><span>Facebook</span></a>
-            </li>
-            <li><a href=""><img src="g" alt=""><span>Instagram</span>
-                </a></li>
-            </li>
+           
+            <?php 
+                      $sql = "SELECT * FROM `network`";
+                
+                        $res = mysqli_query($con, $sql);
+                        while ($row = mysqli_fetch_array($res)) {
+                        $id = $row['id'];
+                        $link = $row['link'];
+                       echo" <li><a class='facebook' href='$link' >Facebook </a>";
+                        }?>
         </div>
         <div class="">
             <h5>ĐƠN VỊ VẬN CHUYỂN</h5>
@@ -98,8 +103,8 @@
             <p class="www">
 
                 Đào Thùy Dương-2021050159<span>|</span>
-                Phương Lâm-<span>|</span>
-                Trần Hoàng Diệu-<span>|</span>
+                Bùi Thị Phương Lâm-2021050374 <span>|</span>
+                Trần Hoàng Diệu-2021050131<span>|</span>
                 Lưu Tiến Đạt-2021050174<span></span></p>
         </div>
 
@@ -121,21 +126,11 @@
     </section>
     <script src="js/slideshow.js">
     </script>
-    <script src="js/countdown.js"></script>
+   
     <script src="js/scroll_top.js"></script>
 
     <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js'></script>
-    <script src="js/index.js"></script>
-    <script src="js/light_and_dark.js"></script>
-    <script src="js/to_top.js"></script>
-    <script>
-        /* Demo purposes only */
-        $(".hover").mouseleave(
-            function() {
-                $(this).removeClass("hover");
-            }
-        );
-    </script>
+
 </footer>
 </body>
 
